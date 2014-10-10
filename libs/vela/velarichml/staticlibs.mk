@@ -1,5 +1,5 @@
 
-VELATML_CSOURCES=$(wildcard $(ROOPKOTHA_HOME)/libs/vela/velarichml/vsrc/*.c)
+VELATML_CSOURCES=$(wildcard $(ROOPKOTHA_VELA_HOME)/libs/vela/velarichml/vsrc/*.c)
 VELATML_VSOURCE_BASE=$(basename $(notdir $(VELATML_CSOURCES)))
-OBJECTS+=$(addprefix $(PROJECT_OBJDIR)/, $(addsuffix .o,$(VELATML_VSOURCE_BASE)))
+OBJECTS+=$(addprefix $(ROOPKOTHA_VELA_HOME)$(OBJDIR_COMMON)/, $(addsuffix .o,$(VELATML_VSOURCE_BASE)))
 
