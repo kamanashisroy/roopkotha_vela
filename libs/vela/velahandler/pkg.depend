@@ -1,0 +1,6 @@
+libs/iostream
+core/commands
+OS_PLATFORM/platform_extra
+-ROOPKOTHA_VELA_HOME
+libs/vela/velagent
+libs/vela/veladivml

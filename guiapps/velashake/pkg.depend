@@ -1,0 +1,8 @@
+OS_PLATFORM/platform_extra
+libs/iostream
+libs/turbine
+core/commands
+core/base
+-ROOPKOTHA_VELA_HOME
+libs/vela/velaveil
+libs/vela/velahandler

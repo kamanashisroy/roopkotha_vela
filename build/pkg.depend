@@ -1,0 +1,11 @@
+libs/doc
+libs/vela
+libs/vela/velarichml
+libs/vela/veladivml
+libs/vela/velagent
+libs/vela/velahandler
+libs/vela/velaveil
+guiapps/velashake
+guiapps/filecommands
+guiapps/historycommands
+guiapps/velapad
