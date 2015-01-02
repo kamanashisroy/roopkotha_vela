@@ -1,5 +1,5 @@
 libs/iostream
-libs/propeller
+libs/fiber
 libs/watchdog
 -SHOTODOL_MEDIA_HOME
 libs/rawimg
