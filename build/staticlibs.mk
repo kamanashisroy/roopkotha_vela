@@ -14,7 +14,7 @@ include $(ROOPKOTHA_VELA_HOME)/libs/vela/velahandler/staticlibs.mk
 include $(ROOPKOTHA_VELA_HOME)/libs/vela/velaveil/staticlibs.mk
 include $(ONUBODH_HOME)/transform/strtrans/staticlibs.mk
 include $(ONUBODH_HOME)/libs/xmlparser/staticlibs.mk
-include $(SHOTODOL_HOME)/libs/turbine/staticlibs.mk
+include $(SHOTODOL_HOME)/libs/spinningwheel/staticlibs.mk
 include $(SHOTODOL_HOME)/libs/iterator/staticlibs.mk
 include $(SHOTODOL_HOME)/$(PLATFORM)/platform_fileutils/staticlibs.mk
 include $(SHOTODOL_SCRIPT_HOME)/build/staticlibs.mk
