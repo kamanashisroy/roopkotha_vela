@@ -10,4 +10,6 @@ Modules
 - [vela](libs/vela)
 	- [velarichml](libs/vela/velarichml)
 	- [veladivml](libs/vela/veladivml)
+	- [velagent](libs/vela/velagent)
+	- [velahandler](libs/vela/velahandler)
 

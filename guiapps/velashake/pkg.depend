@@ -1,6 +1,6 @@
 OS_PLATFORM/platform_extra
 libs/iostream
-libs/turbine
+libs/spinningwheel
 core/commands
 core/base
 -ROOPKOTHA_VELA_HOME
