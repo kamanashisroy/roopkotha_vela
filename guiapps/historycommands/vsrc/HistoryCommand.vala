@@ -28,6 +28,7 @@ internal class HistoryCommand : M100QuietCommand {
 			extring quitEntry = extring.set_static_string("onQuit");
 			extring output = extring();
 			Plugin.swarm(&quitEntry, null, &output);
+			return 0;
 		} 
 		extring output = extring.stack(512);
 		output.printf("We do not know how to go back yet");

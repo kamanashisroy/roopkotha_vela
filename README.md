@@ -17,4 +17,7 @@ Modules
 Applications
 ============
 - [filecommands](guiapps/filecommands)
+- [historycommands](guiapps/historycommands)
+- [velapad](guiapps/velapad)
+- [velashake](guiapps/velashake)
 
