@@ -8,3 +8,6 @@ Modules
 
 - [doc](libs/doc)
 - [vela](libs/vela)
+	- [velarichml](libs/vela/velarichml)
+	- [veladivml](libs/vela/veladivml)
+
