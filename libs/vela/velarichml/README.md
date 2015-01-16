@@ -9,3 +9,7 @@ It renders a subset of html tags, namely,
 
 Please refer to [VelaRichContent](vsrc/VelaRichContent.vala) for more information.
 
+Architecture
+============
+
+![class diagram](../../docs/diagrams/roopkotha_gui_velarichml.svg)
