@@ -51,8 +51,8 @@ public class roopkotha.velawidget.VelaVeil : Replicable {
 
 	public void onContentDisplay(extring*url) {
 		if(changeVeil(url) != 0) {
-			extring default = extring.set_static_string("default");
-			changeVeil(&default);
+			extring deflt = extring.set_static_string("default");
+			changeVeil(&deflt);
 		}
 	}
 

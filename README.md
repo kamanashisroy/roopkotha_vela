@@ -12,4 +12,5 @@ Modules
 	- [veladivml](libs/vela/veladivml)
 	- [velagent](libs/vela/velagent)
 	- [velahandler](libs/vela/velahandler)
+	- [velaveil](libs/vela/velaveil)
 
