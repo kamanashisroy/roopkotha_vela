@@ -14,3 +14,7 @@ Modules
 	- [velahandler](libs/vela/velahandler)
 	- [velaveil](libs/vela/velaveil)
 
+Applications
+============
+- [filecommands](guiapps/filecommands)
+
