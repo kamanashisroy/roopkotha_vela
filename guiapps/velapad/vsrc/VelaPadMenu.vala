@@ -2,8 +2,8 @@ using aroop;
 using shotodol;
 using roopkotha.gui;
 using roopkotha.vela;
-using roopkotha.veladivml;
-using roopkotha.velarower;
+using roopkotha.vela.divml;
+using roopkotha.vela.rower;
 
 /** \addtogroup velapp
  *  @{
@@ -14,7 +14,7 @@ using roopkotha.velarower;
  */
 internal class roopkotha.velapad.VelaPadMenu : Replicable {
 	public PageWindow pg;
-	VelaDivDocument emptyDoc;
+	DivDocument emptyDoc;
 	public VelaPadMenu() {
 		setupGUI();
 	}
@@ -23,7 +23,7 @@ internal class roopkotha.velapad.VelaPadMenu : Replicable {
 		extring path = extring.set_static_string("vela/example");
 		extring aboutVela = extring.set_static_string("About");
 		pg = new PageWindow(&velaTitle, &path, &aboutVela);	
-		emptyDoc = new VelaDivDocument();
+		emptyDoc = new DivDocument();
 		/*extring elem = extring.set_static_string("Write something here..");
 		emptyDoc.addLine(&elem);*/
 		//pg.setDocument(emptyDoc, 0);
@@ -31,7 +31,7 @@ internal class roopkotha.velapad.VelaPadMenu : Replicable {
 		extring url = extring.set_static_string("file://empty");
 		Resource res = new Resource(&baseUrl, &url, emptyDoc);
 	}
-	protected void show(VelaDivDocument doc) {
+	protected void show(DivDocument doc) {
 		pg.setDocument(doc, 0);
 		pg.show();
 	}

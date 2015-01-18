@@ -1,7 +1,6 @@
 using aroop;
 using shotodol;
-using roopkotha.velawidget;
-using roopkotha.velahandler;
+using roopkotha.vela.handler;
 
 
 /** \addtogroup velashake

@@ -1,6 +1,6 @@
 using aroop;
 using shotodol;
-using roopkotha.velarower;
+using roopkotha.vela.rower;
 
 /** \addtogroup velahandler
  *  @{

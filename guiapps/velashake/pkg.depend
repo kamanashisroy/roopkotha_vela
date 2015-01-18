@@ -4,5 +4,5 @@ libs/spinningwheel
 core/commands
 core/base
 -ROOPKOTHA_VELA_HOME
-libs/vela/velaveil
-libs/vela/velahandler
+libs/vela.menu
+libs/vela.handler

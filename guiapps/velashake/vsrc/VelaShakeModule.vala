@@ -1,7 +1,7 @@
 using aroop;
 using shotodol;
-using roopkotha.velarower;
-using roopkotha.velawidget;
+using roopkotha.vela.rower;
+using roopkotha.vela.menu;
 
 
 /**
@@ -20,7 +20,7 @@ public class roopkotha.velashake.VelaShakeModule : DynamicModule {
 	}
 	public override int init() {
 		ModuleLoader.singleton.loadStatic(new RowerModule());
-		ModuleLoader.singleton.loadStatic(new VelaVeilModule());
+		ModuleLoader.singleton.loadStatic(new AutoMenuModule());
 		shake = new VelaShake();
 		extring entry = extring.set_static_string("rehash"); // say we need to rehash
 		Plugin.register(&entry, new HookExtension(rehashHook, this));

@@ -20,11 +20,11 @@ Modules
 
 - [doc](libs/doc)
 - [vela](libs/vela)
-	- [velarichml](libs/vela/velarichml)
-	- [veladivml](libs/vela/veladivml)
-	- [velarower](libs/vela/velarower)
-	- [velahandler](libs/vela/velahandler)
-	- [velaveil](libs/vela/velaveil)
+	- [richml](libs/vela/richml)
+	- [divml](libs/vela/divml)
+	- [rower](libs/vela/rower)
+	- [handler](libs/vela/handler)
+	- [menu](libs/vela/menu)
 
 Applications
 ============

@@ -1,10 +1,10 @@
 libs/doc
 libs/vela
-libs/vela/velarichml
-libs/vela/veladivml
-libs/vela/velarower
-libs/vela/velahandler
-libs/vela/velaveil
+libs/vela/richml
+libs/vela/divml
+libs/vela/rower
+libs/vela/handler
+libs/vela/menu
 guiapps/velashake
 guiapps/filecommands
 guiapps/historycommands

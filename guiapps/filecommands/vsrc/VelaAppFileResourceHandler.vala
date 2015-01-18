@@ -1,8 +1,8 @@
 using aroop;
 using shotodol;
 using roopkotha;
-using roopkotha.veladivml;
-using roopkotha.velarower;
+using roopkotha.vela.divml;
+using roopkotha.vela.rower;
 
 public class roopkotha.filecommands.VelaAppFileResourceHandler : ResourceHandler {
 	public VelaAppFileResourceHandler() {
@@ -20,7 +20,7 @@ public class roopkotha.filecommands.VelaAppFileResourceHandler : ResourceHandler
 			FileInputStream fistm = new FileInputStream.from_file(&fn);
 			Watchdog.logString(core.sourceFileName(), core.sourceLineNo(), 10, "VelaPadCommand:Open file: Opened file for reading ...\n");
 
-			VelaDivDocument doc = new VelaDivDocument();
+			DivDocument doc = new DivDocument();
 			Watchdog.logString(core.sourceFileName(), core.sourceLineNo(), 10, "VelaPadCommand:Open file: Reading ...\n");
 
 			doc.setInputStream(fistm);
