@@ -33,6 +33,11 @@ Applications
 - [velapad](guiapps/velapad)
 - [velashake](guiapps/velashake)
 
+Architecture
+============
+
+![velapad](docs/diagrams/vela_component.svg)
+
 Tasks
 ======
 

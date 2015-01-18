@@ -14,7 +14,7 @@ using roopkotha.vela.menu;
 public class roopkotha.velashake.VelaShakeModule : DynamicModule {
 	VelaShake?shake;
 	VelaShakeModule() {
-		extring name = extring.set_static_string("velashake");
+		extring nm = extring.set_string(core.sourceModuleName());
 		extring ver = extring.set_static_string("0.0.0");
 		base(&name, &ver);
 	}
