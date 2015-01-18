@@ -4,10 +4,10 @@ using roopkotha;
 using roopkotha.vela;
 using roopkotha.doc;
 
-/** \addtogroup velagent
+/** \addtogroup velarower
  *  @{
  */
-public class roopkotha.velagent.VelaResource : Replicable {
+public class roopkotha.velarower.Resource : Replicable {
 	public enum Type {
 		DOCUMENT,
 		IMAGE,
@@ -16,7 +16,7 @@ public class roopkotha.velagent.VelaResource : Replicable {
 	public extring baseUrl;
 	public extring url;
 	RoopDocument referer;
-	public VelaResource(extring*gBase, extring*gUrl, RoopDocument gReferer) {
+	public Resource(extring*gBase, extring*gUrl, RoopDocument gReferer) {
 		if(gBase.is_empty_magical()) {
 			baseUrl = extring();
 		} else {
@@ -53,15 +53,15 @@ public class roopkotha.velagent.VelaResource : Replicable {
 	}
 
 }
-public delegate void roopkotha.velagent.ContentReadyCB(VelaResource id, Replicable content);
-public delegate void roopkotha.velagent.ContentErrorCB(VelaResource id, int code, extring*reason);
-public abstract class roopkotha.velagent.VelaResourceHandler : Replicable {
+public delegate void roopkotha.velarower.ContentReadyCB(Resource id, Replicable content);
+public delegate void roopkotha.velarower.ContentErrorCB(Resource id, int code, extring*reason);
+public abstract class roopkotha.velarower.ResourceHandler : Replicable {
 	protected ContentReadyCB?onContentReady;
 	protected ContentErrorCB?onContentError;
-	public VelaResourceHandler() {
+	public ResourceHandler() {
 		onContentReady = null;
 	}
-	public abstract int request(VelaResource id);
+	public abstract int request(Resource id);
 	public void setContentCallback(ContentReadyCB cb) {
 		onContentReady = cb;
 	}

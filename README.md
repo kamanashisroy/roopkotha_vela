@@ -22,7 +22,7 @@ Modules
 - [vela](libs/vela)
 	- [velarichml](libs/vela/velarichml)
 	- [veladivml](libs/vela/veladivml)
-	- [velagent](libs/vela/velagent)
+	- [velarower](libs/vela/velarower)
 	- [velahandler](libs/vela/velahandler)
 	- [velaveil](libs/vela/velaveil)
 

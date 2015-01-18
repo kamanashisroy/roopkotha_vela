@@ -6,16 +6,16 @@ using roopkotha.vela;
 
 /**
  * \ingroup vela
- * \defgroup vela Action dispatcher for vela browser
+ * \defgroup velarower Velarower facilitates a way to load the pages.
  */
 
-/** \addtogroup velagent
+/** \addtogroup velarower
  *  @{
  */
-public class roopkotha.velagent.VelaRebound : Replicable {
+public class roopkotha.velarower.AutoPilot : Replicable {
 	PageWindow?page;
 	RoopDocument?content;
-	VelaResourceHandler?handler;
+	ResourceHandler?handler;
 	//MediaHandler ml;
 	//WebEventListener el;
 	//WebActionListener al;
@@ -29,7 +29,7 @@ public class roopkotha.velagent.VelaRebound : Replicable {
 	xtring BACK_ACTION;
 	xtring VELA;
 
-	public VelaRebound() {
+	public AutoPilot() {
 		BACK_ACTION = new xtring.set_static_string("Back");
 		VELA = new xtring.set_static_string("Vela");
 		content = null;
@@ -43,12 +43,12 @@ public class roopkotha.velagent.VelaRebound : Replicable {
 		handler = null;
 	}
 
-	~VelaRebound() {
+	~AutoPilot() {
 		images.destroy();
 		stack.destroy();
 	}
 
-	public bool velaxecuteFull(VelaResource id, bool back) {
+	public bool velaxecuteFull(Resource id, bool back) {
 		if (isLoadingPage) { // check if we are on action ..
 			extring dlg = extring.stack(128);
 			dlg.printf("Busy, cannot load reasource:%s\n", id.url.to_string());
@@ -70,7 +70,7 @@ public class roopkotha.velagent.VelaRebound : Replicable {
 	}
 
 	public bool velaxecute(extring*url, bool back) {
-		return velaxecuteFull(new VelaResource(null, url, doc), back);
+		return velaxecuteFull(new Resource(null, url, doc), back);
 	}
 
 	public void onWindowEvent(EventOwner action) {
@@ -103,14 +103,14 @@ public class roopkotha.velagent.VelaRebound : Replicable {
 #endif
 	}
 
-	public void onContentDisplay(VelaResource id, Replicable content) {
+	public void onContentDisplay(Resource id, Replicable content) {
 		extring entry = extring.set_static_string("vela/onContentDisplay");
 		Plugin.swarm(&entry, &id.url, null);
 	}
 
-	public void onContentReady(VelaResource id, Replicable content) {
-		Watchdog.logString(core.sourceFileName(), core.sourceLineNo(), 1, "VelaRebound:New content.. ...\n");
-		if(id.tp == VelaResource.Type.DOCUMENT) {
+	public void onContentReady(Resource id, Replicable content) {
+		Watchdog.logString(core.sourceFileName(), core.sourceLineNo(), 1, "AutoPilot:New content.. ...\n");
+		if(id.tp == Resource.Type.DOCUMENT) {
 			RoopDocument rd = (RoopDocument)content;
 			onContentDisplay(id, rd);
 			page.setDocument(rd, 0);
@@ -119,10 +119,10 @@ public class roopkotha.velagent.VelaRebound : Replicable {
 		}
 	}
 
-	public void onResourceError(VelaResource id, int code, extring*reason) {
+	public void onResourceError(Resource id, int code, extring*reason) {
 		clearFlags();
 		print("onResourceError()\n");
-		if(id.tp == VelaResource.Type.DOCUMENT) {
+		if(id.tp == Resource.Type.DOCUMENT) {
 			// what to do ??
 		} else {
 			// images.put(url, Image.createImage("/ui/error.png"));
@@ -139,7 +139,7 @@ public class roopkotha.velagent.VelaRebound : Replicable {
 		page.setImageLoader(getImage);
 	}
 
-	public void plugHandler(VelaResourceHandler?givenHandler) {
+	public void plugHandler(ResourceHandler?givenHandler) {
 		handler = givenHandler;
 		if(handler == null) return; // TODO set all the callbacks to null when the handler is null
 		handler.setContentCallback(onContentReady);

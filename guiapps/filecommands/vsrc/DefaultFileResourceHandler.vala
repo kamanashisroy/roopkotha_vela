@@ -1,6 +1,5 @@
 using aroop;
 using shotodol;
-using roopkotha.velagent;
 
 /** \addtogroup velahandler
  *  @{

@@ -1,19 +1,19 @@
 using aroop;
 using shotodol;
-using roopkotha.velagent;
+using roopkotha.velarower;
 
 /** \addtogroup velahandler
  *  @{
  */
-public class roopkotha.filecommands.FileResourceHandler : VelaResourceHandler {
-	HashTable<xtring,VelaResourceHandler?> handlers;
+public class roopkotha.filecommands.FileResourceHandler : ResourceHandler {
+	HashTable<xtring,ResourceHandler?> handlers;
 	public FileResourceHandler() {
-		handlers = HashTable<xtring,VelaResourceHandler?>(xtring.hCb,xtring.eCb);
+		handlers = HashTable<xtring,ResourceHandler?>(xtring.hCb,xtring.eCb);
 	}
 	~FileResourceHandler() {
 		handlers.destroy();
 	}
-	VelaResourceHandler? getHandler(VelaResource id) {
+	ResourceHandler? getHandler(Resource id) {
 		int len = id.url.length();
 		int i = 0;
 		extring fileext = extring();
@@ -29,13 +29,13 @@ public class roopkotha.filecommands.FileResourceHandler : VelaResourceHandler {
 		}
 		return handlers.getProperty(&fileext);
 	}
-	public void setHandler(xtring fileext, VelaResourceHandler hdlr) {
+	public void setHandler(xtring fileext, ResourceHandler hdlr) {
 		hdlr.setContentCallback(onContentReady);
 		hdlr.setContentErrorCallback(onContentError);
 		handlers.set(fileext, hdlr);
 	}
-	public override int request(VelaResource id) {
-		VelaResourceHandler?handler = getHandler(id);
+	public override int request(Resource id) {
+		ResourceHandler?handler = getHandler(id);
 		if(handler == null) {
 			return -1;
 		}

@@ -1,12 +1,12 @@
 using aroop;
 using shotodol;
-using roopkotha.velagent;
+using roopkotha.velarower;
 using roopkotha.veladivml;
 
 /** \addtogroup velahandler;
  *  @{
  */
-public class roopkotha.velahandler.CommandResourceHandler : VelaResourceHandler {
+public class roopkotha.velahandler.CommandResourceHandler : ResourceHandler {
 	M100CommandSet velamds;
 	BufferedOutputStream bout;
 	CommandResourceHandler.common() {
@@ -22,7 +22,7 @@ public class roopkotha.velahandler.CommandResourceHandler : VelaResourceHandler 
 	}
 	~CommandResourceHandler() {
 	}
-	public override int request(VelaResource id) {
+	public override int request(Resource id) {
 		extring prefix = extring.stack(64);
 		id.copyPrefix(&prefix);
 		int len = prefix.length();

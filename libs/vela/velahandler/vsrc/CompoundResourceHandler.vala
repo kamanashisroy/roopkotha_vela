@@ -1,19 +1,19 @@
 using aroop;
 using shotodol;
-using roopkotha.velagent;
+using roopkotha.velarower;
 
 /** \addtogroup velahandler
  *  @{
  */
-public class roopkotha.velahandler.CompoundResourceHandler : VelaResourceHandler {
-	HashTable<xtring,VelaResourceHandler?> handlers;
+public class roopkotha.velahandler.CompoundResourceHandler : ResourceHandler {
+	HashTable<xtring,ResourceHandler?> handlers;
 	public CompoundResourceHandler() {
-		handlers = HashTable<xtring,VelaResourceHandler?>(xtring.hCb,xtring.eCb);
+		handlers = HashTable<xtring,ResourceHandler?>(xtring.hCb,xtring.eCb);
 	}
 	~CompoundResourceHandler() {
 		handlers.destroy();
 	}
-	VelaResourceHandler? getHandler(VelaResource id) {
+	ResourceHandler? getHandler(Resource id) {
 		extring prefix = extring.stack(64);
 		id.copyPrefix(&prefix);
 		if(prefix.is_empty()) {
@@ -24,15 +24,15 @@ public class roopkotha.velahandler.CompoundResourceHandler : VelaResourceHandler
 		}
 		return handlers.getProperty(&prefix);
 	}
-	public void setHandler(xtring prefix, VelaResourceHandler?hdlr) {
+	public void setHandler(xtring prefix, ResourceHandler?hdlr) {
 		if(hdlr != null) {
 			hdlr.setContentCallback(onContentReady);
 			hdlr.setContentErrorCallback(onContentError);
 		}
 		handlers.set(prefix, hdlr);
 	}
-	public override int request(VelaResource id) {
-		VelaResourceHandler?handler = getHandler(id);
+	public override int request(Resource id) {
+		ResourceHandler?handler = getHandler(id);
 		if(handler == null) {
 			onContentError(id, 0, null);
 			return -1;

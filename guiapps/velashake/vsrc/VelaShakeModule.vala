@@ -1,6 +1,6 @@
 using aroop;
 using shotodol;
-using roopkotha.velagent;
+using roopkotha.velarower;
 using roopkotha.velawidget;
 
 
@@ -19,7 +19,7 @@ public class roopkotha.velashake.VelaShakeModule : DynamicModule {
 		base(&name, &ver);
 	}
 	public override int init() {
-		ModuleLoader.singleton.loadStatic(new VelagentModule());
+		ModuleLoader.singleton.loadStatic(new RowerModule());
 		ModuleLoader.singleton.loadStatic(new VelaVeilModule());
 		shake = new VelaShake();
 		extring entry = extring.set_static_string("rehash"); // say we need to rehash

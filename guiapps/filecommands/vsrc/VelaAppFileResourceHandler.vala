@@ -2,13 +2,13 @@ using aroop;
 using shotodol;
 using roopkotha;
 using roopkotha.veladivml;
-using roopkotha.velagent;
+using roopkotha.velarower;
 
-public class roopkotha.filecommands.VelaAppFileResourceHandler : VelaResourceHandler {
+public class roopkotha.filecommands.VelaAppFileResourceHandler : ResourceHandler {
 	public VelaAppFileResourceHandler() {
 		base();
 	}
-	public override int request(VelaResource id) {
+	public override int request(Resource id) {
 		print("Loading file ..\n");
 		Watchdog.logString(core.sourceFileName(), core.sourceLineNo(), 10, "VelaPadCommand:Open file ...\n");
 		extring prefix = extring.stack(id.url.length());

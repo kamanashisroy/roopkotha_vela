@@ -2,7 +2,7 @@ libs/doc
 libs/vela
 libs/vela/velarichml
 libs/vela/veladivml
-libs/vela/velagent
+libs/vela/velarower
 libs/vela/velahandler
 libs/vela/velaveil
 guiapps/velashake

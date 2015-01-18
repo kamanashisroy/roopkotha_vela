@@ -1,7 +1,7 @@
 using aroop;
 using shotodol;
 using roopkotha.vela;
-using roopkotha.velagent;
+using roopkotha.velarower;
 
 /** \addtogroup velaveil
  *  @{
@@ -52,7 +52,7 @@ public class roopkotha.velawidget.VelaVeilModule : Module {
 	int loadHandler() {
 		extring pageHandler = extring.set_static_string("vela/page/handler");
 		Plugin.acceptVisitor(&pageHandler, (x) => {
-			VelaResourceHandler handler = (VelaResourceHandler)x.getInterface(null);
+			ResourceHandler handler = (ResourceHandler)x.getInterface(null);
 			veil.plugHandler(handler);
 		});
 		return 0;

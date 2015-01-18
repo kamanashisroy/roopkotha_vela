@@ -1,18 +1,18 @@
 using aroop;
 using shotodol;
 using roopkotha.vela;
-using roopkotha.velagent;
+using roopkotha.velarower;
 
-/** \addtogroup velagent
+/** \addtogroup velarower
  *  @{
  */
-public class roopkotha.velagent.VelagentModule : Module {
-	VelaRebound agent;
-	public VelagentModule() {
-		extring nm = extring.set_static_string("velagent");
+public class roopkotha.velarower.RowerModule : Module {
+	AutoPilot pilot;
+	public RowerModule() {
+		extring nm = extring.set_string(core.sourceModuleName());
 		extring ver = extring.set_static_string("0.0.0");
 		base(&nm,&ver);
-		agent = new VelaRebound();
+		pilot = new AutoPilot();
 	}
 
 	public override int init() {
@@ -23,7 +23,7 @@ public class roopkotha.velagent.VelagentModule : Module {
 
 	int rehashHook(extring*msg, extring*output) {
 		// remove all previous handlers and pages
-		agent.plugPage(null);agent.plugHandler(null);
+		pilot.plugPage(null);pilot.plugHandler(null);
 		if(loadHandler() != -1) // load the handler
 			loadPage(); // load the page
 		return 0;
@@ -33,7 +33,7 @@ public class roopkotha.velagent.VelagentModule : Module {
 		extring pgcb = extring.set_static_string("vela/page");
 		Plugin.acceptVisitor(&pgcb, (x) => {
 			PageWindow page = (PageWindow)x.getInterface(null);
-			agent.plugPage(page);
+			pilot.plugPage(page);
 		});
 		return 0;
 	}
@@ -41,8 +41,8 @@ public class roopkotha.velagent.VelagentModule : Module {
 	int loadHandler() {
 		extring pageHandler = extring.set_static_string("vela/page/handler");
 		Plugin.acceptVisitor(&pageHandler, (x) => {
-			VelaResourceHandler handler = (VelaResourceHandler)x.getInterface(null);
-			agent.plugHandler(handler);
+			ResourceHandler handler = (ResourceHandler)x.getInterface(null);
+			pilot.plugHandler(handler);
 		});
 		return 0;
 	}

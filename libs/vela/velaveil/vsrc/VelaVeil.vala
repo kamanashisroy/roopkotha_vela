@@ -1,6 +1,6 @@
 using aroop;
 using roopkotha.vela;
-using roopkotha.velagent;
+using roopkotha.velarower;
 
 /**
  * \ingroup velawidget
@@ -13,7 +13,7 @@ using roopkotha.velagent;
 public class roopkotha.velawidget.VelaVeil : Replicable {
 	HashTable<xtring,xtring>veils;
 	PageWindow?page;
-	VelaResourceHandler?handler;
+	ResourceHandler?handler;
 	public VelaVeil() {
 		veils = HashTable<xtring,xtring>(xtring.hCb,xtring.eCb);
 		handler = null;
@@ -32,7 +32,7 @@ public class roopkotha.velawidget.VelaVeil : Replicable {
 		page = pg;
 	}
 
-	public void plugHandler(VelaResourceHandler?givenHandler) {
+	public void plugHandler(ResourceHandler?givenHandler) {
 		handler = givenHandler;
 	}
 

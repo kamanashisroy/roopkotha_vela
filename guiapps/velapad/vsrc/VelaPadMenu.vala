@@ -3,7 +3,7 @@ using shotodol;
 using roopkotha.gui;
 using roopkotha.vela;
 using roopkotha.veladivml;
-using roopkotha.velagent;
+using roopkotha.velarower;
 
 /** \addtogroup velapp
  *  @{
@@ -29,7 +29,7 @@ internal class roopkotha.velapad.VelaPadMenu : Replicable {
 		//pg.setDocument(emptyDoc, 0);
 		extring baseUrl = extring.set_static_string("");
 		extring url = extring.set_static_string("file://empty");
-		VelaResource res = new VelaResource(&baseUrl, &url, emptyDoc);
+		Resource res = new Resource(&baseUrl, &url, emptyDoc);
 	}
 	protected void show(VelaDivDocument doc) {
 		pg.setDocument(doc, 0);

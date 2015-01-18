@@ -5,10 +5,10 @@ using onubodh;
 using roopkotha.gui;
 using roopkotha.vela;
 
-/** \addtogroup velagent
+/** \addtogroup velarower
  *  @{
  */
-public class roopkotha.velagent.PageEventOwner : roopkotha.gui.EventOwner {
+public class roopkotha.velarower.PageEventOwner : roopkotha.gui.EventOwner {
 	public extring action;
 	public PageEventOwner(extring*gAction,extring*displayText, Replicable?src) {
 		base(src, displayText);
