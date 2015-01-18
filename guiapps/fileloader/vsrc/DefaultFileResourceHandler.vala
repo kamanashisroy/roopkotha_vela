@@ -4,7 +4,7 @@ using shotodol;
 /** \addtogroup velahandler
  *  @{
  */
-public class roopkotha.filecommands.DefaultFileResourceHandler : FileResourceHandler {
+public class roopkotha.guiapps.fileloader.DefaultFileResourceHandler : FileResourceHandler {
 	public DefaultFileResourceHandler() {
 	}
 

@@ -4,7 +4,7 @@ onLoad:
 	rehash
 	module -load ../roopkotha/guicore/guiimpl/dynalib.so
 	module -load guiapps/velashake/dynalib.so
-	module -load guiapps/filecommands/dynalib.so
+	module -load guiapps/fileloader/dynalib.so
 	module -load guiapps/historycommands/dynalib.so
 	module -load guiapps/velapad/dynalib.so
 	rehash

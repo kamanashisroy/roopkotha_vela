@@ -6,6 +6,6 @@ libs/vela/rower
 libs/vela/handler
 libs/vela/menu
 guiapps/velashake
-guiapps/filecommands
+guiapps/fileloader
 guiapps/historycommands
 guiapps/velapad

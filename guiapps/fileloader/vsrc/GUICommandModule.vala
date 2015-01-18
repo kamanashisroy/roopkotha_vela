@@ -1,6 +1,6 @@
 using aroop;
 using shotodol;
-using roopkotha.filecommands;
+using roopkotha.guiapps.fileloader;
 
 /**
  * \ingroup guiapps
@@ -10,7 +10,7 @@ using roopkotha.filecommands;
 /** \addtogroup gui_command
  *  @{
  */
-public class roopkotha.filecommands.GUICommandModule: DynamicModule {
+public class roopkotha.guiapps.fileloader.GUICommandModule: DynamicModule {
 	public GUICommandModule() {
 		extring nm = extring.set_static_string("filecommand");
 		extring ver = extring.set_static_string("0.0.0");
@@ -20,7 +20,7 @@ public class roopkotha.filecommands.GUICommandModule: DynamicModule {
 	public override int init() {
 		extring entry = extring.set_static_string("vela/command");
 		Plugin.register(&entry, new M100Extension(new FileListCommand(), this));
-		entry.rebuild_and_set_static_string("vela/file/handler");
+		entry.rebuild_and_set_static_string("vela/page/handler");
 		Plugin.register(&entry, new AnyInterfaceExtension(new DefaultFileResourceHandler(), this));
 		//roopkotha.velavanilla.VelaVanillaModule.vanilla.cHandler.setHandler(fopener, fr);
 		//fr.setHandlers();

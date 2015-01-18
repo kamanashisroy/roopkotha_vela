@@ -1,11 +1,12 @@
 using aroop;
 using shotodol;
 using roopkotha.vela.rower;
+using roopkotha.guiapps.fileloader;
 
-/** \addtogroup velahandler
+/** \addtogroup guiapps.fileloader
  *  @{
  */
-public class roopkotha.filecommands.FileResourceHandler : ResourceHandler {
+public class roopkotha.guiapps.fileloader.FileResourceHandler : ResourceHandler {
 	HashTable<xtring,ResourceHandler?> handlers;
 	public FileResourceHandler() {
 		handlers = HashTable<xtring,ResourceHandler?>(xtring.hCb,xtring.eCb);

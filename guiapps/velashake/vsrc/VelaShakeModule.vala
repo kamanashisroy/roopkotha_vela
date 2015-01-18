@@ -16,7 +16,7 @@ public class roopkotha.velashake.VelaShakeModule : DynamicModule {
 	VelaShakeModule() {
 		extring nm = extring.set_string(core.sourceModuleName());
 		extring ver = extring.set_static_string("0.0.0");
-		base(&name, &ver);
+		base(&nm, &ver);
 	}
 	public override int init() {
 		ModuleLoader.singleton.loadStatic(new RowerModule());

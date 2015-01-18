@@ -4,7 +4,7 @@ using roopkotha;
 using roopkotha.vela.divml;
 using roopkotha.vela.rower;
 
-public class roopkotha.filecommands.VelaAppFileResourceHandler : ResourceHandler {
+public class roopkotha.guiapps.fileloader.VelaAppFileResourceHandler : ResourceHandler {
 	public VelaAppFileResourceHandler() {
 		base();
 	}
