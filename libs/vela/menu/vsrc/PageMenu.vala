@@ -109,7 +109,8 @@ internal class roopkotha.vela.menu.PageMenu : Replicable {
 		page.resetMenu();
 
 		// traverse
-		parser.traversePreorder(&map, 100, traverseMenu);
+		//parser.traversePreorder(&map, 100, traverseMenu);
+		parser.traversePreorder(&map, 1, traverseMenu);
 		page.finalizeMenu();
 		map.destroy();
 		return 0;
