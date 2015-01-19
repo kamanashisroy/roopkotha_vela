@@ -3,7 +3,7 @@ Roadmap
 
 - [x] Write all gui commands in _vela/command_ space. Rehash and execute them from command handler.
 - [x] Write all the resource handlers in _vela/handler_ space.
-- [ ] Write all the file handlers in _vela/file/handler_ space.
+- [x] Write all the file handlers in _vela/file/handler_ space.
 - [ ] Write all the document types in _doctype_ space.
 - [ ] Write markdown rendering support.
 - [ ] Study scintilla for scrolling.

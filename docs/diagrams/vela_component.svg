@@ -402,6 +402,14 @@
        effect="spiro"
        id="path-effect3932-9-57"
        is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5001-7-78-0-1-6-2-1-0"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4339-6"
+       is_visible="true" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -1509,4 +1517,40 @@ polygon {
        style="stroke:#000000"
        x="1433.1615"
        y="326.27933">vela</tspan></text>
+  <g
+     id="g4341-84"
+     transform="matrix(0,-1,-1,0,538.81315,925.45228)"
+     style="stroke:#000000">
+    <path
+       inkscape:connector-curvature="0"
+       inkscape:original-d="m 466.53604,353.24669 c -0.16077,-26.68583 -37.24947,-49.34857 -50.72449,-22.24488 -2.66443,5.35928 -2.14282,15.24699 -2.99469,21.3084"
+       inkscape:path-effect="#path-effect5001-7-78-0-1-6-2-1-0"
+       id="path4999-4-0-0-3-8-35"
+       d="m 466.53604,353.24669 c 1.93335,-6.45307 1.42418,-13.60647 -1.4037,-19.72065 -2.82788,-6.11417 -7.94916,-11.13441 -14.11846,-13.83992 -6.1693,-2.7055 -13.33142,-3.07206 -19.74469,-1.01053 -6.41328,2.06153 -12.02033,6.5327 -15.45764,12.32622 -3.75721,6.33271 -4.86083,14.18539 -2.99469,21.3084"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       inkscape:connector-curvature="0"
+       inkscape:original-d="m 439.38463,317.66154 0,-44.32308"
+       inkscape:path-effect="#path-effect4339-6"
+       id="path4337-2"
+       d="m 439.38463,317.66154 0,-44.32308"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+     x="173.67749"
+     y="417.94165"
+     id="text4325-3"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       style="stroke:#000000"
+       x="173.67749"
+       y="417.94165"
+       id="tspan3818-4">vela/file</tspan><tspan
+       sodipodi:role="line"
+       style="stroke:#000000"
+       x="173.67749"
+       y="442.94165"
+       id="tspan11469">/handler</tspan></text>
 </svg>

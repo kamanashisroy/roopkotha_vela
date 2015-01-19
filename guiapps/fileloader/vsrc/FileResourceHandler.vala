@@ -6,42 +6,15 @@ using roopkotha.guiapps.fileloader;
 /** \addtogroup guiapps.fileloader
  *  @{
  */
-public class roopkotha.guiapps.fileloader.FileResourceHandler : URLResourceHandler {
-	HashTable<xtring,ResourceHandler?> handlers;
-	public FileResourceHandler(extring*prefix) {
-		base(prefix);
-		handlers = HashTable<xtring,ResourceHandler?>(xtring.hCb,xtring.eCb);
+
+public abstract class roopkotha.guiapps.fileloader.FileResourceHandler : ResourceHandler {
+	extring extension;
+	public FileResourceHandler(extring*extn) {
+		base();
+		extension = extring.copy_on_demand(extn);
 	}
-	~FileResourceHandler() {
-		handlers.destroy();
-	}
-	ResourceHandler? getHandler(Resource id) {
-		int len = id.url.length();
-		int i = 0;
-		extring fileext = extring();
-		for(i = len; i > 0; i--) {
-			if(id.url.char_at(i) == '.') {
-				fileext = extring.copy_shallow(&id.url);
-				fileext.shift(i);
-			}
-		}
-		if(fileext.is_empty()) {
-			// TODO use plain opener
-			return null;
-		}
-		return handlers.getProperty(&fileext);
-	}
-	public void setHandler(xtring fileext, ResourceHandler hdlr) {
-		hdlr.setContentCallback(onContentReady);
-		hdlr.setContentErrorCallback(onContentError);
-		handlers.set(fileext, hdlr);
-	}
-	public override int request(Resource id) {
-		ResourceHandler?handler = getHandler(id);
-		if(handler == null) {
-			return -1;
-		}
-		return handler.request(id);
+	public void getExtensionAs(extring*outvar) {
+		outvar.rebuild_and_copy_shallow(&extension);
 	}
 }
 /** @} */

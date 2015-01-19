@@ -22,9 +22,12 @@ public class roopkotha.guiapps.fileloader.FileLoaderModule: DynamicModule {
 		Plugin.register(&entry, new M100Extension(new FileListCommand(), this));
 		entry.rebuild_and_set_static_string("vela/page/scheme/handler");
 		extring velafopen = extring.set_static_string("velafopen://");
-		Plugin.register(&entry, new AnyInterfaceExtension(new DefaultFileResourceHandler(&velafopen), this));
-		//roopkotha.velavanilla.VelaVanillaModule.vanilla.cHandler.setHandler(fopener, fr);
-		//fr.setHandlers();
+		DefaultFileResourceHandler handler = new DefaultFileResourceHandler(&velafopen);
+		Plugin.register(&entry, new AnyInterfaceExtension(handler, this));
+		entry.rebuild_and_set_static_string("vela/file/handler");
+		Plugin.register(&entry, new AnyInterfaceExtension(new VelaAppFileResourceHandler(), this));
+		entry.rebuild_and_set_static_string("rehash");
+		Plugin.register(&entry, new HookExtension(handler.rehashHook, this));
 		return 0;
 	}
 	public override int deinit() {

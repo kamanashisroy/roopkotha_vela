@@ -4,9 +4,10 @@ using roopkotha;
 using roopkotha.vela.divml;
 using roopkotha.vela.handler;
 
-public class roopkotha.guiapps.fileloader.VelaAppFileResourceHandler : ResourceHandler {
+public class roopkotha.guiapps.fileloader.VelaAppFileResourceHandler : FileResourceHandler {
 	public VelaAppFileResourceHandler() {
-		base();
+		extring x = extring.set_static_string(".vapp");
+		base(&x);
 	}
 	public override int request(Resource id) {
 		print("Loading file ..\n");
