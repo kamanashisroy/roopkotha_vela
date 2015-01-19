@@ -76,6 +76,11 @@ internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 		return velaxecuteFull(new Resource(null, url, doc), back);
 	}
 
+	public int velaxecuteHook(extring*url, extring*outmsg) {
+		velaxecuteFull(new Resource(null, url, doc), false);
+		return 0;
+	}
+
 	public void onWindowEvent(EventOwner action) {
 		PageEventOwner paction = (PageEventOwner)action;
 

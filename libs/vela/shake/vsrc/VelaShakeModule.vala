@@ -26,6 +26,8 @@ public class roopkotha.vela.shake.VelaShakeModule : DynamicModule {
 		Plugin.register(&entry, new HookExtension(rehashHook, this));
 		entry.rebuild_and_set_static_string("vela/page/scheme/handler"); // register handler
 		Plugin.register(&entry, new AnyInterfaceExtension(shake.cHandler, this));
+		entry.rebuild_and_set_static_string("command"); // register handler
+		Plugin.register(&entry, new M100Extension(new VelaxecuteCommand(), this));
 		rehashHook(null, null);
 		return 0;
 	}

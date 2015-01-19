@@ -20,6 +20,8 @@ public class roopkotha.vela.coordinator.CoordinatorModule : Module {
 		Plugin.register(&entry, new HookExtension(pilot.rehashHook, this));
 		entry.rebuild_and_set_static_string("vela/page/handler");
 		Plugin.register(&entry, new AnyInterfaceExtension(pilot.fetcher, this));
+		entry.rebuild_and_set_static_string("vela/velaxecute");
+		Plugin.register(&entry, new HookExtension(pilot.velaxecuteHook, this));
 		return 0;
 	}
 

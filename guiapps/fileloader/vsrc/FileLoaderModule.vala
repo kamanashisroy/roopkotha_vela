@@ -4,15 +4,15 @@ using roopkotha.guiapps.fileloader;
 
 /**
  * \ingroup guiapps
- * \defgroup gui_command Commands that are capable of showing output in gui.
+ * \defgroup fileloader Commands that are capable of showing output in gui.
  */
 
-/** \addtogroup gui_command
+/** \addtogroup fileloader
  *  @{
  */
 public class roopkotha.guiapps.fileloader.FileLoaderModule: DynamicModule {
 	public FileLoaderModule() {
-		extring nm = extring.set_static_string("filecommand");
+		extring nm = extring.set_string(core.sourceModuleName());
 		extring ver = extring.set_static_string("0.0.0");
 		base(&nm,&ver);
 	}
@@ -21,7 +21,7 @@ public class roopkotha.guiapps.fileloader.FileLoaderModule: DynamicModule {
 		extring entry = extring.set_static_string("vela/command");
 		Plugin.register(&entry, new M100Extension(new FileListCommand(), this));
 		entry.rebuild_and_set_static_string("vela/page/scheme/handler");
-		extring velafopen = extring.set_static_string("velafopen://");
+		extring velafopen = extring.set_static_string("velafopen");
 		DefaultFileResourceHandler handler = new DefaultFileResourceHandler(&velafopen);
 		Plugin.register(&entry, new AnyInterfaceExtension(handler, this));
 		entry.rebuild_and_set_static_string("vela/file/handler");

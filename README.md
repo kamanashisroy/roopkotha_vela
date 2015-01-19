@@ -33,6 +33,7 @@ Modules
 Applications
 ============
 - [fileloader](guiapps/fileloader)
+	- [plain](guiapps/fileloader/plain)
 - [historycommands](guiapps/historycommands)
 - [velapad](guiapps/velapad)
 
