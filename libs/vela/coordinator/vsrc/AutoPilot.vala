@@ -42,6 +42,8 @@ internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 		currentUrl = null;
 		page = null;
 		fetcher = new CompositeResourceHandler();
+		fetcher.setContentCallback(onContentReady);
+		fetcher.setContentErrorCallback(onResourceError);
 	}
 
 	~AutoPilot() {
