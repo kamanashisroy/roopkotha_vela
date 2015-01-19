@@ -3,10 +3,10 @@ using shotodol;
 using roopkotha.vela.handler;
 
 
-/** \addtogroup velashake
+/** \addtogroup vela.shake
  *  @{
  */
-internal class roopkotha.velashake.VelaShake : Replicable {
+internal class roopkotha.vela.shake.VelaShake : Replicable {
 	shotodol.M100Script? script;
 	shotodol.StandardOutputStream stdo;
 	public M100CommandSet velac;
@@ -16,7 +16,7 @@ internal class roopkotha.velashake.VelaShake : Replicable {
 		extring vxecute = extring.set_static_string("velaxecute");
 		cHandler = new CommandResourceHandler.givenCommandSet(&vxecute, velac);
 		script = null;
-		extring rls = extring.set_static_string("velapp/velashake.ske");
+		extring rls = extring.set_static_string("velapp/vela.shake.ske");
 		loadRules(&rls);
 		stdo = new shotodol.StandardOutputStream();
 		loadall();

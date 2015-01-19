@@ -436,18 +436,6 @@ polygon {
        style="stroke:#000000"
        x="722.36737"
        y="212.60205">Application</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="191.52908"
-     y="307.60883"
-     id="text4325"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan4327"
-       style="stroke:#000000"
-       x="191.52908"
-       y="307.60883">vela/page/handler</tspan></text>
   <g
      id="g4345">
     <path
@@ -544,4 +532,16 @@ polygon {
        d="m 439.38463,317.66154 0,-44.32308"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+     x="179.14166"
+     y="303.42093"
+     id="text4325-2"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       style="stroke:#000000"
+       x="179.14166"
+       y="303.42093"
+       id="tspan3818">vela/page/handler</tspan></text>
 </svg>

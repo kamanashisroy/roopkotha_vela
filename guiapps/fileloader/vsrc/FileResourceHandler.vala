@@ -6,7 +6,7 @@ using roopkotha.guiapps.fileloader;
 /** \addtogroup guiapps.fileloader
  *  @{
  */
-public class roopkotha.guiapps.fileloader.FileResourceHandler : PrefixedResourceHandler {
+public class roopkotha.guiapps.fileloader.FileResourceHandler : URLResourceHandler {
 	HashTable<xtring,ResourceHandler?> handlers;
 	public FileResourceHandler(extring*prefix) {
 		base(prefix);

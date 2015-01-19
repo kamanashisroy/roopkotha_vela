@@ -2,4 +2,4 @@ OS_PLATFORM/platform_extra
 libs/iostream
 core/test
 -ROOPKOTHA_VELA_HOME
-guiapps/velashake
+libs/vela.shake

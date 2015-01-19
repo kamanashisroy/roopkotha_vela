@@ -69,14 +69,14 @@ public abstract class roopkotha.vela.handler.ResourceHandler : Replicable {
 		onContentError = cb;
 	}
 }
-public abstract class roopkotha.vela.handler.PrefixedResourceHandler : ResourceHandler {
-	extring prfx;
-	public PrefixedResourceHandler(extring*givenPrefix) {
+public abstract class roopkotha.vela.handler.URLResourceHandler : ResourceHandler {
+	extring scheme;
+	public URLResourceHandler(extring*givenScheme) {
 		base();
-		prfx = extring.copy_on_demand(givenPrefix);
+		scheme = extring.copy_on_demand(givenScheme);
 	}
-	public void getPrefixAs(extring*outvar) {
-		outvar.rebuild_and_copy_shallow(&prfx);
+	public void getSchemeAs(extring*outvar) {
+		outvar.rebuild_and_copy_shallow(&scheme);
 	}
 }
 /** @} */

@@ -5,13 +5,13 @@ using roopkotha.vela.menu;
 
 
 /**
- * \defgroup velashake Shake script file for vela.
+ * \defgroup vela.shake Shake script file for vela.
  */
 
-/** \addtogroup velashake
+/** \addtogroup vela.shake
  *  @{
  */
-public class roopkotha.velashake.VelaShakeModule : DynamicModule {
+public class roopkotha.vela.shake.VelaShakeModule : DynamicModule {
 	VelaShake?shake;
 	VelaShakeModule() {
 		extring nm = extring.set_string(core.sourceModuleName());
@@ -24,7 +24,7 @@ public class roopkotha.velashake.VelaShakeModule : DynamicModule {
 		shake = new VelaShake();
 		extring entry = extring.set_static_string("rehash"); // say we need to rehash
 		Plugin.register(&entry, new HookExtension(rehashHook, this));
-		entry.rebuild_and_set_static_string("vela/page/handler/prefixed"); // register handler
+		entry.rebuild_and_set_static_string("vela/page/scheme/handler"); // register handler
 		Plugin.register(&entry, new AnyInterfaceExtension(shake.cHandler, this));
 		rehashHook(null, null);
 		return 0;
@@ -32,7 +32,7 @@ public class roopkotha.velashake.VelaShakeModule : DynamicModule {
 
 	int rehashHook(extring*msg, extring*output) {
 		/**
-		 * make the command available for velashake
+		 * make the command available for vela.shake
 		 */
 		extring command = extring.set_static_string("vela/command");
 		shake.velac.rehash(&command);

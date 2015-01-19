@@ -28,7 +28,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -242,7 +242,7 @@
      showgrid="false"
      inkscape:zoom="1.0688823"
      inkscape:cx="285.71401"
-     inkscape:cy="78.649039"
+     inkscape:cy="237.152"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -291,7 +291,7 @@ polygon {
        y="95.237457" /></text>
   <g
      id="g4231"
-     transform="translate(-380,-40)"
+     transform="translate(-291.12211,-17.546639)"
      style="stroke:#000000">
     <rect
        style="fill:none;stroke:#000000"
@@ -305,12 +305,12 @@ polygon {
        style="fill:none;stroke:#000000"
        id="g3301-9-0-7-7">
       <polygon
-         points="375,240 380,235 590,235 585,240 "
+         points="380,235 590,235 585,240 375,240 "
          id="polygon4046-6-2-15-7-7"
          transform="translate(170.86059,-100.57799)"
          style="fill:none;stroke:#000000;stroke-miterlimit:1" />
       <polygon
-         points="585,240 590,235 590,365 585,370 "
+         points="590,235 590,365 585,370 585,240 "
          id="polygon4048-6-0-8-5-5"
          transform="translate(170.86059,-100.57799)"
          style="fill:none;stroke:#000000;stroke-miterlimit:1" />
@@ -343,9 +343,11 @@ polygon {
     </g>
   </g>
   <g
-     id="g7115">
+     id="g7115"
+     transform="translate(88.877887,22.453361)"
+     style="stroke:#000000">
     <path
-       d="m 309.66926,27.077484 a 15.436685,14.968906 0 1 1 -30.87337,0 15.436685,14.968906 0 1 1 30.87337,0 z"
+       d="m 309.66926,27.077484 c 0,8.267099 -6.91124,14.968907 -15.43669,14.968907 -8.52544,0 -15.43668,-6.701808 -15.43668,-14.968907 0,-8.267099 6.91124,-14.968906 15.43668,-14.968906 8.52545,0 15.43669,6.701807 15.43669,14.968906 z"
        sodipodi:ry="14.968906"
        sodipodi:rx="15.436685"
        sodipodi:cy="27.077484"
@@ -365,42 +367,30 @@ polygon {
   <text
      xml:space="preserve"
      style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="179.45166"
-     y="131.37085"
-     id="text4283"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan4285"
-       style="stroke:#000000"
-       x="179.45166"
-       y="131.37085">vela/page/handler</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="370.36737"
-     y="212.60205"
+     x="459.24527"
+     y="235.0554"
      id="text4287"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan4289"
        style="stroke:#000000"
-       x="370.36737"
-       y="212.60205">velashake</tspan></text>
+       x="459.24527"
+       y="235.0554">velashake</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="253.75354"
-     y="302.34879"
+     x="342.63144"
+     y="324.80215"
      id="text7146"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan7148"
        style="stroke:#000000"
-       x="253.75354"
-       y="302.34879">vela/command</tspan></text>
+       x="342.63144"
+       y="324.80215">vela/command</tspan></text>
   <g
      id="g4341"
-     transform="translate(-20.31544,0.545188)"
+     transform="translate(68.562447,22.998549)"
      style="stroke:#000000">
     <path
        inkscape:connector-curvature="0"
@@ -417,4 +407,21 @@ polygon {
        d="m 439.38463,317.66154 0,-44.32308"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+     x="217.4995"
+     y="158.40962"
+     id="text4325-2"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4327-0"
+       style="stroke:#000000"
+       x="217.4995"
+       y="158.40962">vela/page</tspan><tspan
+       sodipodi:role="line"
+       style="stroke:#000000"
+       x="217.4995"
+       y="183.40962"
+       id="tspan3818">/scheme/handler</tspan></text>
 </svg>

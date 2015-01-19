@@ -5,7 +5,7 @@ libs/vela/coordinator
 libs/vela/richml
 libs/vela/divml
 libs/vela/menu
-guiapps/velashake
+libs/vela/shake
 guiapps/fileloader
 guiapps/historycommands
 guiapps/velapad

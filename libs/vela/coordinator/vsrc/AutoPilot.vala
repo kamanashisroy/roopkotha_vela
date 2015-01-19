@@ -16,7 +16,7 @@ using roopkotha.vela.handler;
 internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 	PageWindow?page;
 	RoopDocument?content;
-	CompositeResourceHandler?fetcher;
+	internal CompositeResourceHandler fetcher;
 	//MediaHandler ml;
 	//WebEventListener el;
 	//WebActionListener al;
@@ -133,8 +133,8 @@ internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 #endif
 	}
 
-	internal void rehash() {
-		fetcher = new CompositeResourceHandler();
+	internal int rehashHook(extring*msg, extring*output) {
+		fetcher.reset();
 		page = null; // TODO retract all the event handler when page is null
 		extring pgcb = extring.set_static_string("vela/page");
 		Plugin.acceptVisitor(&pgcb, (x) => {
@@ -145,16 +145,17 @@ internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 				page.setImageLoader(getImage);
 			}
 		});
-		extring pageHandler = extring.set_static_string("vela/page/handler/prefixed");
+		extring pageHandler = extring.set_static_string("vela/page/scheme/handler");
 		Plugin.acceptVisitor(&pageHandler, (x) => {
-			PrefixedResourceHandler handler = (PrefixedResourceHandler)x.getInterface(null);
+			URLResourceHandler handler = (URLResourceHandler)x.getInterface(null);
 			handler.setContentCallback(onContentReady);
 			handler.setContentErrorCallback(onResourceError);
-			extring prefix = extring();
-			handler.getPrefixAs(&prefix);
-			xtring tgt = new xtring.copy_deep(&prefix);
+			extring scheme = extring();
+			handler.getSchemeAs(&scheme);
+			xtring tgt = new xtring.copy_deep(&scheme);
 			fetcher.setHandler(tgt, handler);
 		});
+		return 0;
 	}
 }
 

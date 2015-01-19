@@ -384,7 +384,7 @@ polygon {
      style="stroke:#000000"
      id="g13215-8">
     <path
-       d="m 309.66926,27.077484 a 15.436685,14.968906 0 1 1 -30.87337,0 15.436685,14.968906 0 1 1 30.87337,0 z"
+       d="m 309.66926,27.077484 c 0,8.267099 -6.91124,14.968907 -15.43669,14.968907 -8.52544,0 -15.43668,-6.701808 -15.43668,-14.968907 0,-8.267099 6.91124,-14.968906 15.43668,-14.968906 8.52545,0 15.43669,6.701807 15.43669,14.968906 z"
        sodipodi:ry="14.968906"
        sodipodi:rx="15.436685"
        sodipodi:cy="27.077484"
@@ -404,13 +404,18 @@ polygon {
   <text
      xml:space="preserve"
      style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="246.29791"
-     y="308.47766"
-     id="text13246"
+     x="233.46893"
+     y="331.46954"
+     id="text4325"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       id="tspan13248"
+       id="tspan4327"
        style="stroke:#000000"
-       x="246.29791"
-       y="308.47766">vela/page/handler</tspan></text>
+       x="233.46893"
+       y="331.46954">vela/page</tspan><tspan
+       sodipodi:role="line"
+       style="stroke:#000000"
+       x="233.46893"
+       y="356.46954"
+       id="tspan3818">/scheme/handler</tspan></text>
 </svg>

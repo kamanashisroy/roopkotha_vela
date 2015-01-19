@@ -16,14 +16,10 @@ public class roopkotha.vela.coordinator.CoordinatorModule : Module {
 	}
 
 	public override int init() {
-		extring entry = extring.set_static_string("rehash"); // say we need rehash
-		Plugin.register(&entry, new HookExtension(rehashHook, this));
-		return 0;
-	}
-
-	int rehashHook(extring*msg, extring*output) {
-		// remove all previous handlers and pages
-		pilot.rehash();
+		extring entry = extring.set_static_string("rehash");
+		Plugin.register(&entry, new HookExtension(pilot.rehashHook, this));
+		entry.rebuild_and_set_static_string("vela/page/handler");
+		Plugin.register(&entry, new AnyInterfaceExtension(pilot.fetcher, this));
 		return 0;
 	}
 

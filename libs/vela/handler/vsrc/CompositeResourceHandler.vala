@@ -38,5 +38,9 @@ public class roopkotha.vela.handler.CompositeResourceHandler : ResourceHandler {
 		}
 		return handler.request(id);
 	}
+	public void reset() {
+		handlers.destroy();
+		handlers = HashTable<xtring,ResourceHandler?>(xtring.hCb,xtring.eCb);
+	}
 }
 /** @} */

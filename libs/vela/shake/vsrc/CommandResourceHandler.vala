@@ -3,10 +3,10 @@ using shotodol;
 using roopkotha.vela.divml;
 using roopkotha.vela.handler;
 
-/** \addtogroup vela.velashake;
+/** \addtogroup vela.vela.shake;
  *  @{
  */
-public class roopkotha.velashake.CommandResourceHandler : vela.handler.PrefixedResourceHandler {
+public class roopkotha.vela.shake.CommandResourceHandler : vela.handler.URLResourceHandler {
 	M100CommandSet velamds;
 	BufferedOutputStream bout;
 	CommandResourceHandler.common(extring*prefix) {

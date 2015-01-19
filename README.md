@@ -28,13 +28,13 @@ Modules
 		- [handler](libs/vela/handler)
 	- Controller
 		- [menu](libs/vela/menu)
+		- [shake](libs/vela/shake)
 
 Applications
 ============
 - [fileloader](guiapps/fileloader)
 - [historycommands](guiapps/historycommands)
 - [velapad](guiapps/velapad)
-- [velashake](guiapps/velashake)
 
 Architecture
 ============

@@ -20,7 +20,7 @@ public class roopkotha.guiapps.fileloader.FileLoaderModule: DynamicModule {
 	public override int init() {
 		extring entry = extring.set_static_string("vela/command");
 		Plugin.register(&entry, new M100Extension(new FileListCommand(), this));
-		entry.rebuild_and_set_static_string("vela/page/handler/prefixed");
+		entry.rebuild_and_set_static_string("vela/page/scheme/handler");
 		extring velafopen = extring.set_static_string("velafopen://");
 		Plugin.register(&entry, new AnyInterfaceExtension(new DefaultFileResourceHandler(&velafopen), this));
 		//roopkotha.velavanilla.VelaVanillaModule.vanilla.cHandler.setHandler(fopener, fr);

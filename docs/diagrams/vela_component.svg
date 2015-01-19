@@ -370,6 +370,10 @@
        effect="spiro"
        id="path-effect3932-9-5-9"
        is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3932-9-57"
+       is_visible="true" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -508,18 +512,6 @@ polygon {
        d="m 269.61837,207.50426 44.90673,0"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="511.0824"
-     y="575.12469"
-     id="text4283"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan4285"
-       style="stroke:#000000"
-       x="511.0824"
-       y="575.12469">vela/page/handler</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
@@ -800,18 +792,6 @@ polygon {
          style="stroke:#000000"
          id="tspan4285-8"
          sodipodi:role="line">vela/page</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text4325"
-       y="463.19342"
-       x="866.52148"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       xml:space="preserve"><tspan
-         y="463.19342"
-         x="866.52148"
-         style="stroke:#000000"
-         id="tspan4327"
-         sodipodi:role="line">vela/page/handler</tspan></text>
     <g
        id="g4345"
        style="stroke:#000000"
@@ -1005,18 +985,6 @@ polygon {
        style="stroke:#000000"
        x="1234.9849"
        y="585.66107">vela/page</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="1067.0624"
-     y="741.89893"
-     id="text4325-6"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan4327-4"
-       style="stroke:#000000"
-       x="1067.0624"
-       y="741.89893">vela/page/handler</tspan></text>
   <g
      transform="translate(675.53328,434.2903)"
      style="stroke:#000000"
@@ -1203,18 +1171,6 @@ polygon {
      id="path16688"
      inkscape:path-effect="#path-effect16690"
      inkscape:original-d="m 677.21538,527.13842 -111.13846,0"
-     inkscape:connector-curvature="0" />
-  <polygon
-     points="290,147.5 290,152.5 285,150 "
-     style="fill:#000000;stroke:none"
-     id="polygon4130-3-6-0"
-     transform="matrix(4,0,0,4,-345.5846,-74.1847)" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 813.49231,527.13842 239.47689,-29.1077"
-     id="path16710"
-     inkscape:path-effect="#path-effect16712"
-     inkscape:original-d="m 813.49231,527.13842 239.47689,-29.1077"
      inkscape:connector-curvature="0" />
   <polygon
      points="285,150 290,147.5 290,152.5 "
@@ -1432,18 +1388,6 @@ polygon {
        d="m 286.44518,206.37314 44.90673,0"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="519.32703"
-     y="284.28177"
-     id="text13246-6"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan13248-2"
-       style="stroke:#000000"
-       x="519.32703"
-       y="284.28177">vela/page/handler</tspan></text>
   <polygon
      points="285,150 290,147.5 290,152.5 "
      style="fill:#000000;stroke:none"
@@ -1470,4 +1414,89 @@ polygon {
      inkscape:original-d="m 183.9077,105.3846 25.13846,160.09231"
      inkscape:connector-curvature="0"
      transform="translate(165,100)" />
+  <text
+     xml:space="preserve"
+     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+     x="520.16974"
+     y="572.20074"
+     id="text4325-2"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4327-0"
+       style="stroke:#000000"
+       x="520.16974"
+       y="572.20074">vela/page</tspan><tspan
+       sodipodi:role="line"
+       style="stroke:#000000"
+       x="520.16974"
+       y="597.20074"
+       id="tspan3818">/scheme/handler</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+     x="536.35437"
+     y="296.13916"
+     id="text4325-2-0"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4327-0-6"
+       style="stroke:#000000"
+       x="536.35437"
+       y="296.13916">vela/page</tspan><tspan
+       sodipodi:role="line"
+       style="stroke:#000000"
+       x="536.35437"
+       y="321.13916"
+       id="tspan3818-6">/scheme/handler</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+     x="1095.7083"
+     y="729.49298"
+     id="text4325-2-4"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4327-0-2"
+       style="stroke:#000000"
+       x="1095.7083"
+       y="729.49298">vela/page</tspan><tspan
+       sodipodi:role="line"
+       style="stroke:#000000"
+       x="1095.7083"
+       y="754.49298"
+       id="tspan3818-59">/scheme/handler</tspan></text>
+  <g
+     id="g18769"
+     transform="matrix(0,1,-1,0,1940.2923,-425.40001)"
+     style="stroke:#000000">
+    <path
+       d="m 309.66926,27.077484 c 0,8.267099 -6.91124,14.968907 -15.43669,14.968907 -8.52544,0 -15.43668,-6.701808 -15.43668,-14.968907 0,-8.267099 6.91124,-14.968906 15.43668,-14.968906 8.52545,0 15.43669,6.701807 15.43669,14.968906 z"
+       sodipodi:ry="14.968906"
+       sodipodi:rx="15.436685"
+       sodipodi:cy="27.077484"
+       sodipodi:cx="294.23257"
+       id="path4963-2-2-4-4-5-4-9-4"
+       style="opacity:0.98999999;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:type="arc"
+       transform="matrix(1,0,0,-1,642.60335,912.52364)" />
+    <path
+       inkscape:connector-curvature="0"
+       inkscape:original-d="m 951.38636,886.12397 44.90673,0"
+       inkscape:path-effect="#path-effect3932-9-57"
+       id="path3930-1-0"
+       d="m 951.38636,886.12397 44.90673,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+     x="854.05542"
+     y="462.99597"
+     id="text4325-2-9"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       style="stroke:#000000"
+       x="854.05542"
+       y="462.99597"
+       id="tspan3818-3">vela/page/handler</tspan></text>
 </svg>
