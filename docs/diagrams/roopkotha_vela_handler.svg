@@ -18,7 +18,7 @@
    inkscape:version="0.48.3.1 r9886"
    width="100%"
    height="100%"
-   sodipodi:docname="roopkotha_gui_velahandler.svg"
+   sodipodi:docname="roopkotha_vela_handler.svg"
    style="stroke:#000000">
   <metadata
      id="metadata4150">
@@ -1005,8 +1005,8 @@
      id="namedview4146"
      showgrid="false"
      inkscape:zoom="0.75581399"
-     inkscape:cx="1048.0271"
-     inkscape:cy="848.23077"
+     inkscape:cx="514.62659"
+     inkscape:cy="712.41465"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -1063,14 +1063,14 @@ polygon {
        sodipodi:linespacing="125%"
        id="text5950-83-4"
        y="680.62695"
-       x="976.3681"
+       x="994.3681"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          y="680.62695"
-         x="976.3681"
+         x="994.3681"
          style="stroke:#000000"
          id="tspan5952-5-7"
-         sodipodi:role="line">VelaResource</tspan></text>
+         sodipodi:role="line">Resource</tspan></text>
   </g>
   <path
      style="opacity:0.98999999;fill:none;stroke:#000000;stroke-width:1.85485673;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
@@ -1093,19 +1093,19 @@ polygon {
        id="tspan3436-0-5-8"
        style="stroke:#000000"
        x="803.33331"
-       y="217.60773">roopkotha.velagent</tspan></text>
+       y="217.60773">roopkotha.vela.rower</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="1046.3271"
+     x="1066.3271"
      y="218.84381"
      id="text3933"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3935"
        style="stroke:#000000"
-       x="1046.3271"
-       y="218.84381">libs/vela/velagent</tspan></text>
+       x="1066.3271"
+       y="218.84381">libs/vela/rower</tspan></text>
   <g
      transform="translate(385.24262,260.70987)"
      style="stroke:#000000"
@@ -1159,14 +1159,14 @@ polygon {
        sodipodi:linespacing="125%"
        id="text5950-83-4-8-3"
        y="1124.5579"
-       x="600.42664"
+       x="624.42664"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          y="1124.5579"
-         x="600.42664"
+         x="624.42664"
          style="stroke:#000000"
          id="tspan5952-5-7-8-8"
-         sodipodi:role="line">VelaRebound</tspan></text>
+         sodipodi:role="line">AutoPilot</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text6378"
@@ -1391,15 +1391,15 @@ polygon {
       <text
          xml:space="preserve"
          style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-         x="935.62091"
+         x="955.62091"
          y="258.73322"
          id="text5950-83-6-7"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
            id="tspan5952-5-35-4"
            style="stroke:#000000"
-           x="935.62091"
-           y="258.73322">VelaResourceHandler</tspan></text>
+           x="955.62091"
+           y="258.73322">ResourceHandler</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
@@ -1518,19 +1518,19 @@ polygon {
        id="tspan3436-0-5-8-9"
        style="stroke:#000000"
        x="214.00378"
-       y="217.06659">roopkotha.velahandler</tspan></text>
+       y="217.06659">roopkotha.vela.handler</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="484.99768"
+     x="524.99768"
      y="218.30267"
      id="text3933-5"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3935-3"
        style="stroke:#000000"
-       x="484.99768"
-       y="218.30267">libs/vela/velahandler</tspan></text>
+       x="524.99768"
+       y="218.30267">libs/vela/handler</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"

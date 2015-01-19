@@ -6,6 +6,6 @@ This is the a mechanism to handle the vela events.
 Architecture
 =============
 
-![velagent](../../docs/diagrams/velagent_class_diagram.svg)
+![rower class diagram](../../docs/diagrams/vela_rower_class_diagram.svg)
 
-![velagent component](../../docs/diagrams/vela_velagent_component.svg)
+![rower component diagram](../../docs/diagrams/vela_rower_component.svg)

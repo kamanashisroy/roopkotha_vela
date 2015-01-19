@@ -18,7 +18,7 @@
    inkscape:version="0.48.3.1 r9886"
    width="100%"
    height="100%"
-   sodipodi:docname="velagent_class_diagram.svg"
+   sodipodi:docname="vela_rower_class_diagram.svg"
    style="stroke:#000000">
   <metadata
      id="metadata4150">
@@ -28,7 +28,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -964,9 +964,9 @@
      inkscape:window-height="750"
      id="namedview4146"
      showgrid="false"
-     inkscape:zoom="0.1889535"
-     inkscape:cx="815.48915"
-     inkscape:cy="594.39809"
+     inkscape:zoom="0.755814"
+     inkscape:cx="221.14813"
+     inkscape:cy="568.49231"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -1023,14 +1023,14 @@ polygon {
        sodipodi:linespacing="125%"
        id="text5950-83-4"
        y="680.62695"
-       x="976.3681"
+       x="990.3681"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          y="680.62695"
-         x="976.3681"
+         x="990.3681"
          style="stroke:#000000"
          id="tspan5952-5-7"
-         sodipodi:role="line">VelaResource</tspan></text>
+         sodipodi:role="line">Resource</tspan></text>
   </g>
   <path
      style="opacity:0.98999999;fill:none;stroke:#000000;stroke-width:1.85485673;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
@@ -1053,19 +1053,19 @@ polygon {
        id="tspan3436-0-5-8"
        style="stroke:#000000"
        x="203.33325"
-       y="495.60773">roopkotha.velagent</tspan></text>
+       y="495.60773">roopkotha.vela.rower</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="446.32715"
+     x="466.32715"
      y="496.84381"
      id="text3933"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3935"
        style="stroke:#000000"
-       x="446.32715"
-       y="496.84381">libs/vela/velagent</tspan></text>
+       x="466.32715"
+       y="496.84381">libs/vela/rower</tspan></text>
   <g
      id="g6252"
      transform="translate(-672,340)"
@@ -1092,14 +1092,14 @@ polygon {
        sodipodi:linespacing="125%"
        id="text5950-83-6-7"
        y="258.73322"
-       x="935.62091"
+       x="957.62091"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          y="258.73322"
-         x="935.62091"
+         x="957.62091"
          style="stroke:#000000"
          id="tspan5952-5-35-4"
-         sodipodi:role="line">VelaResourceHandler</tspan></text>
+         sodipodi:role="line">ResourceHandler</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text5975-9-3-7"
@@ -1190,14 +1190,14 @@ polygon {
        sodipodi:linespacing="125%"
        id="text5950-83-4-8-3"
        y="1124.5579"
-       x="600.42664"
+       x="618.42664"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          y="1124.5579"
-         x="600.42664"
+         x="618.42664"
          style="stroke:#000000"
          id="tspan5952-5-7-8-8"
-         sodipodi:role="line">VelaRebound</tspan></text>
+         sodipodi:role="line">AutoPilot</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text6378"

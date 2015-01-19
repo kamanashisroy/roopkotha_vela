@@ -7,9 +7,9 @@ It renders a subset of html tags, namely,
 - BR
 - IMG
 
-Please refer to [VelaRichContent](vsrc/VelaRichContent.vala) for more information.
+Please refer to [RichContent](vsrc/RichContent.vala) for more information.
 
 Architecture
 ============
 
-![class diagram](../../docs/diagrams/roopkotha_gui_velarichml.svg)
+![class diagram](../../docs/diagrams/roopkotha_gui_richml.svg)

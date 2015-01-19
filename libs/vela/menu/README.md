@@ -6,4 +6,4 @@ Vela Menu parses special markup to generate the menu.
 Architecture
 =============
 
-![class diagram](../../docs/diagrams/velaveil_component.svg)
+![menu component](../../docs/diagrams/vela_menu_component.svg)
