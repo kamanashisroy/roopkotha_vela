@@ -1,24 +1,25 @@
 using aroop;
 using shotodol;
-using roopkotha.vela.rower;
 using roopkotha.vela.divml;
+using roopkotha.vela.handler;
 
-/** \addtogroup vela.handler;
+/** \addtogroup vela.velashake;
  *  @{
  */
-public class roopkotha.vela.handler.CommandResourceHandler : ResourceHandler {
+public class roopkotha.velashake.CommandResourceHandler : vela.handler.PrefixedResourceHandler {
 	M100CommandSet velamds;
 	BufferedOutputStream bout;
-	CommandResourceHandler.common() {
+	CommandResourceHandler.common(extring*prefix) {
+		base(prefix);
 		bout = new BufferedOutputStream(1024);
 	}
-	public CommandResourceHandler() {
+	public CommandResourceHandler(extring*prefix) {
 		velamds = new M100CommandSet();
-		CommandResourceHandler.common();
+		CommandResourceHandler.common(prefix);
 	}
-	public CommandResourceHandler.givenCommandSet(M100CommandSet cmds) {
+	public CommandResourceHandler.givenCommandSet(extring*prefix, M100CommandSet cmds) {
 		velamds = cmds;
-		CommandResourceHandler.common();
+		CommandResourceHandler.common(prefix);
 	}
 	~CommandResourceHandler() {
 	}

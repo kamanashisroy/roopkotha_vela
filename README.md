@@ -20,11 +20,14 @@ Modules
 
 - [doc](libs/doc)
 - [vela](libs/vela)
-	- [richml](libs/vela/richml)
-	- [divml](libs/vela/divml)
-	- [rower](libs/vela/rower)
-	- [handler](libs/vela/handler)
-	- [menu](libs/vela/menu)
+	- [coordinator](libs/vela/coordinator)
+	- Model and view
+		- [richml](libs/vela/richml)
+		- [divml](libs/vela/divml)
+	- Events
+		- [handler](libs/vela/handler)
+	- Controller
+		- [menu](libs/vela/menu)
 
 Applications
 ============

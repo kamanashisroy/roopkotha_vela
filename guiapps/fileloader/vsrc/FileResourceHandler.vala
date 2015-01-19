@@ -1,14 +1,15 @@
 using aroop;
 using shotodol;
-using roopkotha.vela.rower;
+using roopkotha.vela.handler;
 using roopkotha.guiapps.fileloader;
 
 /** \addtogroup guiapps.fileloader
  *  @{
  */
-public class roopkotha.guiapps.fileloader.FileResourceHandler : ResourceHandler {
+public class roopkotha.guiapps.fileloader.FileResourceHandler : PrefixedResourceHandler {
 	HashTable<xtring,ResourceHandler?> handlers;
-	public FileResourceHandler() {
+	public FileResourceHandler(extring*prefix) {
+		base(prefix);
 		handlers = HashTable<xtring,ResourceHandler?>(xtring.hCb,xtring.eCb);
 	}
 	~FileResourceHandler() {

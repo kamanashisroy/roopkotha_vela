@@ -6,3 +6,4 @@ core/base
 -ROOPKOTHA_VELA_HOME
 libs/vela.menu
 libs/vela.handler
+libs/vela.divml

@@ -385,8 +385,8 @@
      id="namedview4146"
      showgrid="false"
      inkscape:zoom="0.75581394"
-     inkscape:cx="981.82756"
-     inkscape:cy="572.43527"
+     inkscape:cx="580.28102"
+     inkscape:cy="342.52158"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -931,15 +931,15 @@ polygon {
   <text
      xml:space="preserve"
      style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     x="1088.929"
-     y="645.72803"
+     x="1062.929"
+     y="647.72803"
      id="text4207-5"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan4209-9"
        style="stroke:#000000"
-       x="1088.929"
-       y="645.72803">rower</tspan></text>
+       x="1062.929"
+       y="647.72803">coordinator</tspan></text>
   <g
      transform="translate(312.57963,393.1267)"
      style="stroke:#000000"

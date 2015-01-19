@@ -5,7 +5,8 @@ using shotodol;
  *  @{
  */
 public class roopkotha.guiapps.fileloader.DefaultFileResourceHandler : FileResourceHandler {
-	public DefaultFileResourceHandler() {
+	public DefaultFileResourceHandler(extring*prefix) {
+		base(prefix);
 	}
 
 	public void setHandlers() {

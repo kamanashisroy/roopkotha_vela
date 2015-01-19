@@ -2,5 +2,4 @@ libs/iostream
 core/commands
 OS_PLATFORM/platform_extra
 -ROOPKOTHA_VELA_HOME
-libs/vela.rower
-libs/vela.divml
+libs/vela

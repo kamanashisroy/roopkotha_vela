@@ -7,10 +7,10 @@ using aroop;
  *      Author: kamanashisroy
  */
 
-/** \addtogroup vela.rower
+/** \addtogroup vela.coordinator
  *  @{
  */
-public class roopkotha.vela.rower.WebVariables : Replicable {
+public class roopkotha.vela.coordinator.WebVariables : Replicable {
 	HashTable<xtring,xtring> tbl;
 	public WebVariables() {
 		tbl = HashTable<xtring,xtring>(xtring.hCb,xtring.eCb,4);

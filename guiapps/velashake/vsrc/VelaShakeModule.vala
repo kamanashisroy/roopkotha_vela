@@ -1,6 +1,6 @@
 using aroop;
 using shotodol;
-using roopkotha.vela.rower;
+using roopkotha.vela.coordinator;
 using roopkotha.vela.menu;
 
 
@@ -19,12 +19,12 @@ public class roopkotha.velashake.VelaShakeModule : DynamicModule {
 		base(&nm, &ver);
 	}
 	public override int init() {
-		ModuleLoader.singleton.loadStatic(new RowerModule());
+		ModuleLoader.singleton.loadStatic(new CoordinatorModule());
 		ModuleLoader.singleton.loadStatic(new AutoMenuModule());
 		shake = new VelaShake();
 		extring entry = extring.set_static_string("rehash"); // say we need to rehash
 		Plugin.register(&entry, new HookExtension(rehashHook, this));
-		entry.rebuild_and_set_static_string("vela/page/handler"); // register handler
+		entry.rebuild_and_set_static_string("vela/page/handler/prefixed"); // register handler
 		Plugin.register(&entry, new AnyInterfaceExtension(shake.cHandler, this));
 		rehashHook(null, null);
 		return 0;

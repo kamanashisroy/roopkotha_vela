@@ -4,10 +4,10 @@ using roopkotha;
 using roopkotha.vela;
 using roopkotha.doc;
 
-/** \addtogroup vela.rower
+/** \addtogroup vela.handler
  *  @{
  */
-public class roopkotha.vela.rower.Resource : Replicable {
+public class roopkotha.vela.handler.Resource : Replicable {
 	public enum Type {
 		DOCUMENT,
 		IMAGE,
@@ -53,9 +53,9 @@ public class roopkotha.vela.rower.Resource : Replicable {
 	}
 
 }
-public delegate void roopkotha.vela.rower.ContentReadyCB(Resource id, Replicable content);
-public delegate void roopkotha.vela.rower.ContentErrorCB(Resource id, int code, extring*reason);
-public abstract class roopkotha.vela.rower.ResourceHandler : Replicable {
+public delegate void roopkotha.vela.handler.ContentReadyCB(Resource id, Replicable content);
+public delegate void roopkotha.vela.handler.ContentErrorCB(Resource id, int code, extring*reason);
+public abstract class roopkotha.vela.handler.ResourceHandler : Replicable {
 	protected ContentReadyCB?onContentReady;
 	protected ContentErrorCB?onContentError;
 	public ResourceHandler() {
@@ -67,6 +67,16 @@ public abstract class roopkotha.vela.rower.ResourceHandler : Replicable {
 	}
 	public void setContentErrorCallback(ContentErrorCB cb) {
 		onContentError = cb;
+	}
+}
+public abstract class roopkotha.vela.handler.PrefixedResourceHandler : ResourceHandler {
+	extring prfx;
+	public PrefixedResourceHandler(extring*givenPrefix) {
+		base();
+		prfx = extring.copy_on_demand(givenPrefix);
+	}
+	public void getPrefixAs(extring*outvar) {
+		outvar.rebuild_and_copy_shallow(&prfx);
 	}
 }
 /** @} */

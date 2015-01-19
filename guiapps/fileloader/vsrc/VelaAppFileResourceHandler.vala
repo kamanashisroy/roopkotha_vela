@@ -2,7 +2,7 @@ using aroop;
 using shotodol;
 using roopkotha;
 using roopkotha.vela.divml;
-using roopkotha.vela.rower;
+using roopkotha.vela.handler;
 
 public class roopkotha.guiapps.fileloader.VelaAppFileResourceHandler : ResourceHandler {
 	public VelaAppFileResourceHandler() {

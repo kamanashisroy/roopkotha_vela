@@ -3,19 +3,20 @@ using shotodol;
 using roopkotha.gui;
 using roopkotha.doc;
 using roopkotha.vela;
+using roopkotha.vela.handler;
 
 /**
  * \ingroup vela
- * \defgroup vela.rower Velarower facilitates a way to load the pages.
+ * \defgroup vela.coordinator Coordinator facilitates a way to load the pages.
  */
 
-/** \addtogroup vela.rower
+/** \addtogroup vela.coordinator
  *  @{
  */
-internal class roopkotha.vela.rower.AutoPilot : Replicable {
+internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 	PageWindow?page;
 	RoopDocument?content;
-	ResourceHandler?handler;
+	CompositeResourceHandler?fetcher;
 	//MediaHandler ml;
 	//WebEventListener el;
 	//WebActionListener al;
@@ -40,7 +41,7 @@ internal class roopkotha.vela.rower.AutoPilot : Replicable {
 		baseUrl = null;
 		currentUrl = null;
 		page = null;
-		handler = null;
+		fetcher = new CompositeResourceHandler();
 	}
 
 	~AutoPilot() {
@@ -65,7 +66,7 @@ internal class roopkotha.vela.rower.AutoPilot : Replicable {
 		isLoadingPage = true;
 		isGoingBack = back;
 
-		handler.request(id);
+		fetcher.request(id);
 		return true;
 	}
 
@@ -131,19 +132,29 @@ internal class roopkotha.vela.rower.AutoPilot : Replicable {
 		Window.pushBalloon("Error ..", null, hashCode(), 2000);
 #endif
 	}
-	public void plugPage(PageWindow?view) {
-		page = view;
-		if(page == null) return; // TODO retract all the event handler when page is null
-		page.setActionCB(onWindowEvent);
-		page.setPageEvent(onPageEvent);
-		page.setImageLoader(getImage);
-	}
 
-	public void plugHandler(ResourceHandler?givenHandler) {
-		handler = givenHandler;
-		if(handler == null) return; // TODO set all the callbacks to null when the handler is null
-		handler.setContentCallback(onContentReady);
-		handler.setContentErrorCallback(onResourceError);
+	internal void rehash() {
+		fetcher = new CompositeResourceHandler();
+		page = null; // TODO retract all the event handler when page is null
+		extring pgcb = extring.set_static_string("vela/page");
+		Plugin.acceptVisitor(&pgcb, (x) => {
+			page = (PageWindow)x.getInterface(null);
+			if(page != null) {
+				page.setActionCB(onWindowEvent);
+				page.setPageEvent(onPageEvent);
+				page.setImageLoader(getImage);
+			}
+		});
+		extring pageHandler = extring.set_static_string("vela/page/handler/prefixed");
+		Plugin.acceptVisitor(&pageHandler, (x) => {
+			PrefixedResourceHandler handler = (PrefixedResourceHandler)x.getInterface(null);
+			handler.setContentCallback(onContentReady);
+			handler.setContentErrorCallback(onResourceError);
+			extring prefix = extring();
+			handler.getPrefixAs(&prefix);
+			xtring tgt = new xtring.copy_deep(&prefix);
+			fetcher.setHandler(tgt, handler);
+		});
 	}
 }
 

@@ -1,9 +1,9 @@
 libs/doc
 libs/vela
+libs/vela/handler
+libs/vela/coordinator
 libs/vela/richml
 libs/vela/divml
-libs/vela/rower
-libs/vela/handler
 libs/vela/menu
 guiapps/velashake
 guiapps/fileloader

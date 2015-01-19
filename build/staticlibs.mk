@@ -9,7 +9,7 @@ include $(ROOPKOTHA_VELA_HOME)/libs/doc/staticlibs.mk
 include $(ROOPKOTHA_VELA_HOME)/libs/vela/staticlibs.mk
 include $(ROOPKOTHA_VELA_HOME)/libs/vela/richml/staticlibs.mk
 include $(ROOPKOTHA_VELA_HOME)/libs/vela/divml/staticlibs.mk
-include $(ROOPKOTHA_VELA_HOME)/libs/vela/rower/staticlibs.mk
+include $(ROOPKOTHA_VELA_HOME)/libs/vela/coordinator/staticlibs.mk
 include $(ROOPKOTHA_VELA_HOME)/libs/vela/handler/staticlibs.mk
 include $(ROOPKOTHA_VELA_HOME)/libs/vela/menu/staticlibs.mk
 include $(ONUBODH_HOME)/transform/strtrans/staticlibs.mk

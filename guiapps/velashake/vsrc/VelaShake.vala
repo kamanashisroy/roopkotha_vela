@@ -10,21 +10,16 @@ internal class roopkotha.velashake.VelaShake : Replicable {
 	shotodol.M100Script? script;
 	shotodol.StandardOutputStream stdo;
 	public M100CommandSet velac;
-	public CompoundResourceHandler cHandler;
+	public CommandResourceHandler cHandler;
 	public VelaShake() {
-		cHandler = new CompoundResourceHandler();
 		velac = new M100CommandSet();
-		setupHandlers();
+		extring vxecute = extring.set_static_string("velaxecute");
+		cHandler = new CommandResourceHandler.givenCommandSet(&vxecute, velac);
 		script = null;
 		extring rls = extring.set_static_string("velapp/velashake.ske");
 		loadRules(&rls);
 		stdo = new shotodol.StandardOutputStream();
 		loadall();
-	}
-	void setupHandlers() {
-		CommandResourceHandler hdlr = new CommandResourceHandler.givenCommandSet(velac);
-		xtring vxecute = new xtring.set_static_string("velaxecute");
-		cHandler.setHandler(vxecute, hdlr);
 	}
 	public void loadRules(extring*fn) {
 		try {

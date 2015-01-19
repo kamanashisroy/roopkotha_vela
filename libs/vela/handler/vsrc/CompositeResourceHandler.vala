@@ -1,16 +1,15 @@
 using aroop;
 using shotodol;
-using roopkotha.vela.rower;
 
 /** \addtogroup vela.handler
  *  @{
  */
-public class roopkotha.vela.handler.CompoundResourceHandler : ResourceHandler {
+public class roopkotha.vela.handler.CompositeResourceHandler : ResourceHandler {
 	HashTable<xtring,ResourceHandler?> handlers;
-	public CompoundResourceHandler() {
+	public CompositeResourceHandler() {
 		handlers = HashTable<xtring,ResourceHandler?>(xtring.hCb,xtring.eCb);
 	}
-	~CompoundResourceHandler() {
+	~CompositeResourceHandler() {
 		handlers.destroy();
 	}
 	ResourceHandler? getHandler(Resource id) {
