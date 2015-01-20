@@ -34,6 +34,7 @@ Applications
 ============
 - [fileloader](guiapps/fileloader)
 	- [plain](guiapps/fileloader/plain)
+	- [markdown](guiapps/fileloader/markdown)
 - [historycommands](guiapps/historycommands)
 - [velapad](guiapps/velapad)
 

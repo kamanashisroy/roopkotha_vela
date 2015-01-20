@@ -4,9 +4,11 @@ libs/vela/handler
 libs/vela/coordinator
 libs/vela/richml
 libs/vela/divml
+libs/vela/markdown
 libs/vela/menu
 libs/vela/shake
 guiapps/fileloader
 guiapps/fileloader/plain
+guiapps/fileloader/markdown
 guiapps/historycommands
 guiapps/velapad

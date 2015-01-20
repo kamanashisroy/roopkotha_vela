@@ -6,6 +6,7 @@ onLoad:
 	module -load libs/vela/shake/dynalib.so
 	module -load guiapps/fileloader/dynalib.so
 	module -load guiapps/fileloader/plain/dynalib.so
+	module -load guiapps/fileloader/markdown/dynalib.so
 	module -load guiapps/historycommands/dynalib.so
 	module -load guiapps/velapad/dynalib.so
 	rehash

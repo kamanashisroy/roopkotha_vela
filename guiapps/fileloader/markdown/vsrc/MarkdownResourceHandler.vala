@@ -4,9 +4,9 @@ using roopkotha;
 using roopkotha.doc;
 using roopkotha.vela.handler;
 
-public class roopkotha.guiapps.fileloader.PlainFileResourceHandler : FileResourceHandler {
-	public PlainFileResourceHandler() {
-		extring x = extring.set_static_string(".txt");
+public class roopkotha.guiapps.fileloader.MarkdownResourceHandler : FileResourceHandler {
+	public MarkdownResourceHandler() {
+		extring x = extring.set_static_string(".md");
 		base(&x);
 	}
 	public override int request(Resource id) {
