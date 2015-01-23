@@ -34,7 +34,7 @@ public class roopkotha.vela.markdown.MarkdownDocument : roopkotha.doc.RoopDocume
 	}
 
 	public void setInputStream(InputStream istrm) {
-		instrm = istrm;
+		instrm = new LineInputStream(istrm);
 	}
 
 	public void tryReading() {

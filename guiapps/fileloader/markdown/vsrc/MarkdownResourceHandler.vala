@@ -2,6 +2,7 @@ using aroop;
 using shotodol;
 using roopkotha;
 using roopkotha.doc;
+using roopkotha.vela.markdown;
 using roopkotha.vela.handler;
 
 public class roopkotha.guiapps.fileloader.MarkdownResourceHandler : FileResourceHandler {
@@ -21,7 +22,7 @@ public class roopkotha.guiapps.fileloader.MarkdownResourceHandler : FileResource
 			FileInputStream fistm = new FileInputStream.from_file(&fn);
 			Watchdog.logString(core.sourceFileName(), core.sourceLineNo(), 10, "VelaPadCommand:Open file: Opened file for reading ...\n");
 
-			PlainDocument doc = new PlainDocument();
+			MarkdownDocument doc = new MarkdownDocument();
 			Watchdog.logString(core.sourceFileName(), core.sourceLineNo(), 10, "VelaPadCommand:Open file: Reading ...\n");
 
 			doc.setInputStream(fistm);
