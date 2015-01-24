@@ -24,6 +24,7 @@ Modules
 	- Model and view
 		- [richml](libs/vela/richml)
 		- [divml](libs/vela/divml)
+		- [markdown](libs/vela/markdown)
 	- Events
 		- [handler](libs/vela/handler)
 	- Controller

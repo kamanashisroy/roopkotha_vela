@@ -78,7 +78,6 @@ public class roopkotha.vela.markdown.MarkdownContent : roopkotha.vela.FormattedC
 				//print("[%s]", map.source.to_string());
 				visitCapsule(&cap);
 			} else {
-				//print("Traversing non-text capsules ..%s\n",xit.nextTag.to_string());
 				switch(xit.objectType) {
 				case MarkObject.DOUBLE_STARRED_OBJECT:
 					cap.textType = FormattedTextType.B;
@@ -92,14 +91,17 @@ public class roopkotha.vela.markdown.MarkdownContent : roopkotha.vela.FormattedC
 				case MarkObject.STARRED_OBJECT:
 				case MarkObject.UNDERSCORED_OBJECT:
 					cap.textType = FormattedTextType.I;
+					print("Traversing bold capsules ..\n");
 					break;
 				case MarkObject.PLAIN_OBJECT:
 					cap.textType = FormattedTextType.PLAIN;
+					print("Traversing plain ..\n");
 					break;
 				case MarkObject.LINEBREAK_OBJECT:
 					cap.textType = FormattedTextType.P;
 					break;
 				default:
+					print("Traversing unknown capsules ..\n");
 					cap.textType = FormattedTextType.UNKNOWN;
 					break;
 				}
