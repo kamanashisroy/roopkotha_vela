@@ -39,6 +39,25 @@ public class roopkotha.vela.markdown.MarkdownDocument : roopkotha.doc.RoopDocume
 		instrm = new LineInputStream.full(false, 1024, istrm);
 	}
 
+	void crlfFixup(extring*data) {
+		uchar c = data.char_at(data.length()-1);
+		if(c == '\n') {
+			data.trim_to_length(data.length()-1);
+			if(data.length()-1 >= 0) {
+				c = data.char_at(data.length()-1);
+				if(c == '\r') {
+					data.trim_to_length(data.length()-1);
+				}
+			}
+			data.concat_char('\n');
+		} else if(c == '\r') {
+			data.trim_to_length(data.length()-1);
+			data.concat_char('\n');
+		} else {
+			data.concat_char('\n');
+		}
+	}
+
 	public void tryReading() {
 #if LOW_MEMORY
 		extring data = extring.stack(1024);
@@ -53,15 +72,17 @@ public class roopkotha.vela.markdown.MarkdownDocument : roopkotha.doc.RoopDocume
 					if(data.length() != 0)spellChunk(&data);
 					break;
 				}
-				if(bytesRead <= 3) {
+				if(bytesRead <= 2) {
 					uchar c = data.char_at(data.length()-1);
-					if(c == '\r' || c == '\n') {
-						spellChunk(&data);
-						data.trim_to_length(0);
+					if(c == '\n' || c == '\r') {
+						crlfFixup(&data);
 					}
+					spellChunk(&data);
+					data.trim_to_length(0);
+					continue;
 				}
 				if(data.length() > 0) {
-					data.concat_char(' ');
+					crlfFixup(&data);
 				}
 			} catch(IOStreamError.InputStreamError e) {
 				break;

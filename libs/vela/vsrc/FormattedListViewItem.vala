@@ -142,7 +142,7 @@ public class roopkotha.vela.FormattedListViewItem : ListViewItem {
 		int off, ret;
 #if GUI_DEBUG
 		extring talk = extring.stack(128);
-		talk.printf("Rendering text:%s\n", text.to_string());
+		talk.printf("Rendering text[%d]:%s\n", text.length(), text.to_string());
 		font.dumpAll(&talk);
 		talk.concat_char('\n');
 		Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.WatchdogSeverity.DEBUG, 0, 0, &talk);

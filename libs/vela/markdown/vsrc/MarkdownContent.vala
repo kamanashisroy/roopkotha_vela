@@ -91,22 +91,28 @@ public class roopkotha.vela.markdown.MarkdownContent : roopkotha.vela.FormattedC
 				case MarkObject.STARRED_OBJECT:
 				case MarkObject.UNDERSCORED_OBJECT:
 					cap.textType = FormattedTextType.I;
-					print("Traversing bold capsules ..\n");
+					//print("Traversing bold capsules ..\n");
 					break;
 				case MarkObject.PLAIN_OBJECT:
 					cap.textType = FormattedTextType.PLAIN;
-					print("Traversing plain ..\n");
+					//print("Traversing plain ..\n");
 					break;
 				case MarkObject.LINEBREAK_OBJECT:
 					cap.textType = FormattedTextType.P;
 					break;
+				case MarkObject.HEADER_OBJECT:
+					//print("Traversing header capsules ..\n");
+					cap.textType = FormattedTextType.PLAIN;
+					cap.content = extring.stack(1024);
+					xit.m.getSourceReferenceAs(xit.basePos + xit.shift, xit.basePos + xit.shift + xit.content.length(), &cap.content);
+					//print("Text\t\t- pos:%d,clen:%d,text content:%s\n", xit.pos, xit.content.length(), cap.content.to_string());
+					break;
 				default:
-					print("Traversing unknown capsules ..\n");
+					//print("Traversing unknown capsules ..\n");
 					cap.textType = FormattedTextType.UNKNOWN;
 					break;
 				}
 				visitCapsule(&cap);
-				//print("End of non-text capsules ..%s\n",xit.nextTag.to_string());
 			}
 		});
 		return 0;
