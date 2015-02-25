@@ -19,7 +19,7 @@ public class roopkotha.guiapps.fileloader.plain.PlainFileLoaderModule: DynamicMo
 	
 	public override int init() {
 		extring entry = extring.set_static_string("vela/file/handler");
-		Plugin.register(&entry, new AnyInterfaceExtension(new PlainFileResourceHandler(), this));
+		PluginManager.register(&entry, new AnyInterfaceExtension(new PlainFileResourceHandler(), this));
 		return 0;
 	}
 	public override int deinit() {

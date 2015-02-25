@@ -17,11 +17,11 @@ public class roopkotha.vela.menu.AutoMenuModule : Module {
 
 	public override int init() {
 		extring entry = extring.set_static_string("vela/command");
-		Plugin.register(&entry, new M100Extension(new PageMenuCommand(pmenuLoader), this));
+		PluginManager.register(&entry, new M100Extension(new PageMenuCommand(pmenuLoader), this));
 		entry.rebuild_and_set_static_string("vela/onContentDisplay");
-		Plugin.register(&entry, new HookExtension(onContentDisplayHook, this));
+		PluginManager.register(&entry, new HookExtension(onContentDisplayHook, this));
 		entry.rebuild_and_set_static_string("rehash");
-		Plugin.register(&entry, new HookExtension(rehashHook, this));
+		PluginManager.register(&entry, new HookExtension(rehashHook, this));
 		return 0;
 	}
 
@@ -42,7 +42,7 @@ public class roopkotha.vela.menu.AutoMenuModule : Module {
 
 	int loadPage() {
 		extring pgcb = extring.set_static_string("vela/page");
-		Plugin.acceptVisitor(&pgcb, (x) => {
+		PluginManager.acceptVisitor(&pgcb, (x) => {
 			PageWindow page = (PageWindow)x.getInterface(null);
 			pmenuLoader.plugPage(page);
 		});
@@ -51,7 +51,7 @@ public class roopkotha.vela.menu.AutoMenuModule : Module {
 
 	int loadHandler() {
 		extring pageHandler = extring.set_static_string("vela/page/handler");
-		Plugin.acceptVisitor(&pageHandler, (x) => {
+		PluginManager.acceptVisitor(&pageHandler, (x) => {
 			ResourceHandler handler = (ResourceHandler)x.getInterface(null);
 			pmenuLoader.plugHandler(handler);
 		});
@@ -67,7 +67,7 @@ public class roopkotha.vela.menu.AutoMenuModule : Module {
 		 */
 		extring entry = extring.set_static_string("vela/page/menu");
 		extring outml = extring();
-		Plugin.swarm(&entry, &entry, &outml);
+		PluginManager.swarm(&entry, &entry, &outml);
 		extring content = extring.stack_copy_deep(&outml);
 		extring space = extring.set_static_string(" ");
 		do {
@@ -75,7 +75,7 @@ public class roopkotha.vela.menu.AutoMenuModule : Module {
 			int i = 0;
 			for(i = 0;i < next.length() && next.char_at(i) != '\n';i++);
 			content.shift(i);
-			next.trim_to_length(i);
+			next.truncate(i);
 			if(next.is_empty()) break;
 			extring name = extring();
 			LineAlign.next_token_delimitered_sliteral(&next, &name, &space);
@@ -88,7 +88,7 @@ public class roopkotha.vela.menu.AutoMenuModule : Module {
 	}
 
 	public override int deinit() {
-		Plugin.unregisterModule(this);
+		PluginManager.unregisterModule(this);
 		base.deinit();
 		return 0;
 	}

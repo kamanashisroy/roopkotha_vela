@@ -27,7 +27,7 @@ internal class HistoryCommand : M100QuietCommand {
 		if(back == 99) {
 			extring quitEntry = extring.set_static_string("onQuit");
 			extring output = extring();
-			Plugin.swarm(&quitEntry, null, &output);
+			PluginManager.swarm(&quitEntry, null, &output);
 			return 0;
 		} 
 		extring output = extring.stack(512);

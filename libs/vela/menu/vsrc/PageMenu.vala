@@ -70,7 +70,7 @@ internal class roopkotha.vela.menu.PageMenu : Replicable {
 		extring attrVal = extring();
 		while(xit.nextAttr(&attrKey, &attrVal)) {
 			// trim ..
-			key.trim_to_length(0);
+			key.truncate();
 			key.concat(&attrKey);
 			key.zero_terminate();
 			while(key.char_at(0) == ' ') {key.shift(1);}
@@ -81,14 +81,14 @@ internal class roopkotha.vela.menu.PageMenu : Replicable {
 			}
 		}
 		while(href.char_at(0) == '"') {href.shift(1);}
-		while(href.char_at(href.length()-1) == '"') {href.trim_to_length(href.length()-1);}
+		while(href.char_at(href.length()-1) == '"') {href.truncate(href.length()-1);}
 		href.zero_terminate();
 		if(href.is_empty()) {
 			return;
 		}
 		while(label.char_at(0) == ' ') {label.shift(1);}
 		while(label.char_at(0) == '"') {label.shift(1);}
-		while(label.char_at(label.length()-1) == '"') {label.trim_to_length(label.length()-1);}
+		while(label.char_at(label.length()-1) == '"') {label.truncate(label.length()-1);}
 		label.zero_terminate();
 		if(label.is_empty()) {
 			return;

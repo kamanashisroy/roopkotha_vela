@@ -29,7 +29,7 @@ internal class roopkotha.velapad.VelaPad : VelaPadMenu {
 			doc.tryReading();
 			fistm.close();
 			extring entry = extring.set_static_string("vela/onContentDisplay");
-			Plugin.swarm(&entry, &entry, null);
+			PluginManager.swarm(&entry, &entry, null);
 			show(doc);
 
 			Watchdog.logString(core.sourceFileName(), core.sourceLineNo(), 10, "VelaPadCommand:Open file: Done.\n");

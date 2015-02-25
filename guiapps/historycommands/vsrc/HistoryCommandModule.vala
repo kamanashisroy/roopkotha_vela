@@ -18,7 +18,7 @@ public class roopkotha.historycommands.HistoryCommandModule: DynamicModule {
 	
 	public override int init() {
 		extring command = extring.set_static_string("vela/command");
-		Plugin.register(&command, new M100Extension(new HistoryCommand(), this));
+		PluginManager.register(&command, new M100Extension(new HistoryCommand(), this));
 		return 0;
 	}
 	public override int deinit() {

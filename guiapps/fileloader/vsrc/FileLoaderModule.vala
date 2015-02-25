@@ -19,15 +19,15 @@ public class roopkotha.guiapps.fileloader.FileLoaderModule: DynamicModule {
 	
 	public override int init() {
 		extring entry = extring.set_static_string("vela/command");
-		Plugin.register(&entry, new M100Extension(new FileListCommand(), this));
+		PluginManager.register(&entry, new M100Extension(new FileListCommand(), this));
 		entry.rebuild_and_set_static_string("vela/page/scheme/handler");
 		extring velafopen = extring.set_static_string("velafopen");
 		DefaultFileResourceHandler handler = new DefaultFileResourceHandler(&velafopen);
-		Plugin.register(&entry, new AnyInterfaceExtension(handler, this));
+		PluginManager.register(&entry, new AnyInterfaceExtension(handler, this));
 		entry.rebuild_and_set_static_string("vela/file/handler");
-		Plugin.register(&entry, new AnyInterfaceExtension(new VelaAppFileResourceHandler(), this));
+		PluginManager.register(&entry, new AnyInterfaceExtension(new VelaAppFileResourceHandler(), this));
 		entry.rebuild_and_set_static_string("rehash");
-		Plugin.register(&entry, new HookExtension(handler.rehashHook, this));
+		PluginManager.register(&entry, new HookExtension(handler.rehashHook, this));
 		return 0;
 	}
 	public override int deinit() {

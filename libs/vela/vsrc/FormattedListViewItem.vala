@@ -162,7 +162,7 @@ public class roopkotha.vela.FormattedListViewItem : ListViewItem {
 				// draw the line of text
 				extring xt = extring.copy_shallow(text);
 				xt.shift(off);
-				xt.trim_to_length(ret);
+				xt.truncate(ret);
 				//print(">> ... * Drawing text(%d,%d):%s\n", xPos, yPos, xt.to_string());
 				g.drawString(&xt, xPos, yPos, 1000, 1000, roopkotha.gui.Graphics.anchor.TOP | roopkotha.gui.Graphics.anchor.LEFT);
 				xPos += font.subStringWidth(text, off, ret - off);

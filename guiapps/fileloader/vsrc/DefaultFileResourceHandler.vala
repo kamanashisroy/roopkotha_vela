@@ -11,7 +11,7 @@ public class roopkotha.guiapps.fileloader.DefaultFileResourceHandler : Composite
 
 	internal int rehashHook(extring*inmsg, extring*outmsg) {
 		extring entry = extring.set_static_string("vela/file/handler");
-		Plugin.acceptVisitor(&entry, (x) => {
+		PluginManager.acceptVisitor(&entry, (x) => {
 			FileResourceHandler handler = (FileResourceHandler)x.getInterface(null);
 			extring suffix = extring();
 			handler.getExtensionAs(&suffix);

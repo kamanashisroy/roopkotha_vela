@@ -23,11 +23,11 @@ public class roopkotha.vela.shake.VelaShakeModule : DynamicModule {
 		ModuleLoader.singleton.loadStatic(new AutoMenuModule());
 		shake = new VelaShake();
 		extring entry = extring.set_static_string("rehash"); // say we need to rehash
-		Plugin.register(&entry, new HookExtension(rehashHook, this));
+		PluginManager.register(&entry, new HookExtension(rehashHook, this));
 		entry.rebuild_and_set_static_string("vela/page/scheme/handler"); // register handler
-		Plugin.register(&entry, new AnyInterfaceExtension(shake.cHandler, this));
+		PluginManager.register(&entry, new AnyInterfaceExtension(shake.cHandler, this));
 		entry.rebuild_and_set_static_string("command"); // register handler
-		Plugin.register(&entry, new M100Extension(new VelaxecuteCommand(), this));
+		PluginManager.register(&entry, new M100Extension(new VelaxecuteCommand(), this));
 		rehashHook(null, null);
 		return 0;
 	}

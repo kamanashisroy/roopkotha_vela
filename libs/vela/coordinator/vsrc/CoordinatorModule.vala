@@ -17,16 +17,16 @@ public class roopkotha.vela.coordinator.CoordinatorModule : Module {
 
 	public override int init() {
 		extring entry = extring.set_static_string("rehash");
-		Plugin.register(&entry, new HookExtension(pilot.rehashHook, this));
+		PluginManager.register(&entry, new HookExtension(pilot.rehashHook, this));
 		entry.rebuild_and_set_static_string("vela/page/handler");
-		Plugin.register(&entry, new AnyInterfaceExtension(pilot.fetcher, this));
+		PluginManager.register(&entry, new AnyInterfaceExtension(pilot.fetcher, this));
 		entry.rebuild_and_set_static_string("vela/velaxecute");
-		Plugin.register(&entry, new HookExtension(pilot.velaxecuteHook, this));
+		PluginManager.register(&entry, new HookExtension(pilot.velaxecuteHook, this));
 		return 0;
 	}
 
 	public override int deinit() {
-		Plugin.unregisterModule(this);
+		PluginManager.unregisterModule(this);
 		base.deinit();
 		return 0;
 	}

@@ -42,16 +42,16 @@ public class roopkotha.vela.markdown.MarkdownDocument : roopkotha.doc.RoopDocume
 	void crlfFixup(extring*data) {
 		uchar c = data.char_at(data.length()-1);
 		if(c == '\n') {
-			data.trim_to_length(data.length()-1);
+			data.truncate(data.length()-1);
 			if(data.length()-1 >= 0) {
 				c = data.char_at(data.length()-1);
 				if(c == '\r') {
-					data.trim_to_length(data.length()-1);
+					data.truncate(data.length()-1);
 				}
 			}
 			data.concat_char('\n');
 		} else if(c == '\r') {
-			data.trim_to_length(data.length()-1);
+			data.truncate(data.length()-1);
 			data.concat_char('\n');
 		} else {
 			data.concat_char('\n');
@@ -78,7 +78,7 @@ public class roopkotha.vela.markdown.MarkdownDocument : roopkotha.doc.RoopDocume
 						crlfFixup(&data);
 					}
 					spellChunk(&data);
-					data.trim_to_length(0);
+					data.truncate();
 					continue;
 				}
 				if(data.length() > 0) {

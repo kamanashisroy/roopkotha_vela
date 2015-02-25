@@ -19,7 +19,7 @@ public class roopkotha.guiapps.fileloader.markdown.MarkdownLoaderModule: Dynamic
 	
 	public override int init() {
 		extring entry = extring.set_static_string("vela/file/handler");
-		Plugin.register(&entry, new AnyInterfaceExtension(new MarkdownResourceHandler(), this));
+		PluginManager.register(&entry, new AnyInterfaceExtension(new MarkdownResourceHandler(), this));
 		return 0;
 	}
 	public override int deinit() {

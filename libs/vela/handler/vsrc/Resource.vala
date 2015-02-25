@@ -41,14 +41,14 @@ public class roopkotha.vela.handler.Resource : Replicable {
 		int len = prefix.length();
 		for(i = 0; i < len;i++) {
 			if(prefix.char_at(i) == ':') {
-				prefix.trim_to_length(i);
+				prefix.truncate(i);
 				//print("Prefix:%s\n", prefix.to_string());
 				valid = true;
 				break;
 			}
 		}
 		if(!valid && len != 0) {
-			prefix.trim_to_length(0);
+			prefix.truncate();
 		}
 	}
 

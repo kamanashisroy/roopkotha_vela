@@ -113,7 +113,7 @@ internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 
 	public void onContentDisplay(Resource id, Replicable content) {
 		extring entry = extring.set_static_string("vela/onContentDisplay");
-		Plugin.swarm(&entry, &id.url, null);
+		PluginManager.swarm(&entry, &id.url, null);
 	}
 
 	public void onContentReady(Resource id, Replicable content) {
@@ -144,7 +144,7 @@ internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 		fetcher.reset();
 		page = null; // TODO retract all the event handler when page is null
 		extring pgcb = extring.set_static_string("vela/page");
-		Plugin.acceptVisitor(&pgcb, (x) => {
+		PluginManager.acceptVisitor(&pgcb, (x) => {
 			page = (PageWindow)x.getInterface(null);
 			if(page != null) {
 				page.setActionCB(onWindowEvent);
@@ -153,7 +153,7 @@ internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 			}
 		});
 		extring pageHandler = extring.set_static_string("vela/page/scheme/handler");
-		Plugin.acceptVisitor(&pageHandler, (x) => {
+		PluginManager.acceptVisitor(&pageHandler, (x) => {
 			URLResourceHandler handler = (URLResourceHandler)x.getInterface(null);
 			handler.setContentCallback(onContentReady);
 			handler.setContentErrorCallback(onResourceError);

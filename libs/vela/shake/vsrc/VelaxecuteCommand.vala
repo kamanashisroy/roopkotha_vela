@@ -24,7 +24,7 @@ internal class roopkotha.vela.shake.VelaxecuteCommand : M100Command {
 		extring dlg = extring.stack(128);
 		dlg.printf("executing:%s\n", inp.to_string());
 		pad.write(&dlg);
-		Plugin.swarm(&entry, &inp, &outmsg);
+		PluginManager.swarm(&entry, &inp, &outmsg);
 		return 0;
 	}
 }

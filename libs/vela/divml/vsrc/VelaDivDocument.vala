@@ -80,7 +80,7 @@ public class roopkotha.vela.divml.DivDocument : roopkotha.doc.RoopDocument {
 		extring attrVal = extring();
 		while(xit.nextAttr(&attrKey, &attrVal)) {
 			// trim ..
-			key.trim_to_length(0);
+			key.truncate();
 			key.concat(&attrKey);
 			key.zero_terminate();
 			while(key.char_at(0) == ' ') {key.shift(1);}
@@ -89,7 +89,7 @@ public class roopkotha.vela.divml.DivDocument : roopkotha.doc.RoopDocument {
 			}
 		}
 		while(href.char_at(0) == '"') {href.shift(1);}
-		while(href.char_at(href.length()-1) == '"') {href.trim_to_length(href.length()-1);}
+		while(href.char_at(href.length()-1) == '"') {href.truncate(href.length()-1);}
 		href.zero_terminate();
 		onubodh.XMLIterator pl = onubodh.XMLIterator(xit.m);
 		if(parser.peelCapsule(&pl, xit) != 0) {

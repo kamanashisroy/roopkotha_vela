@@ -30,7 +30,7 @@ internal class roopkotha.vela.shake.VelaShake : Replicable {
 			extring buf = extring.stack(1024);
 			while(true) {
 				try {
-					buf.trim_to_length(0);
+					buf.truncate();
 					if(lis.read(&buf) == 0) {
 						break;
 					}

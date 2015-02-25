@@ -13,11 +13,11 @@ public class roopkotha.velapad.VelaPadModule : DynamicModule {
 	public override int init() {
 		VelaCommand cmd = new VelaCommand(this);
 		extring entry = extring.set_static_string("command");
-		Plugin.register(&entry, new M100Extension(cmd, this));
+		PluginManager.register(&entry, new M100Extension(cmd, this));
 		entry.rebuild_and_set_static_string("vela/page");
-		Plugin.register(&entry, new AnyInterfaceExtension(cmd.vpad.pg, this));
+		PluginManager.register(&entry, new AnyInterfaceExtension(cmd.vpad.pg, this));
 		entry.rebuild_and_set_static_string("rehash");
-		Plugin.swarm(&entry, null, null);
+		PluginManager.swarm(&entry, null, null);
 		return 0;
 	}
 
