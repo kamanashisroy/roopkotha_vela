@@ -1,5 +1,5 @@
 
-function rehash() 
+function onLoad() 
 	OutputStream.write("Rehashing lua modules\n")
 	return "vela/page/menu"
 end
