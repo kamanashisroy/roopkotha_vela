@@ -36,7 +36,7 @@ public class roopkotha.doc.DocumentContentModel : ListContentModel {
 	public DocumentContentModel() {
 		base();
 		extring dlg = extring.set_static_string("Created DocumentContentModel\n");
-		Watchdog.watchit_string(core.sourceFileName(), core.sourceLineNo(), 3, Watchdog.WatchdogSeverity.DEBUG, 0, 0, "DocumentContentModel:created");
+		Watchdog.watchit_string(core.sourceFileName(), core.sourceLineNo(), 3, Watchdog.Severity.DEBUG, 0, 0, "DocumentContentModel:created");
 #if false
 		// see if the node is selection box ..
 		if(node instanceof Element) {
@@ -52,7 +52,7 @@ public class roopkotha.doc.DocumentContentModel : ListContentModel {
 		doc = aDoc;
 		extring dlg = extring.stack(64);
 		dlg.printf("DocumentContentModel:new document of %d lines\n", getCount());
-		Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 3, Watchdog.WatchdogSeverity.DEBUG, 0, 0, &dlg);
+		Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 3, Watchdog.Severity.DEBUG, 0, 0, &dlg);
 	}
 	
 	public AugmentedContent? getSelectedContent() {
@@ -136,7 +136,7 @@ public class roopkotha.doc.DocumentContentModel : ListContentModel {
 		elem.getTextAs(&data);
 		extring dlg = extring.stack(256);
 		dlg.printf("Plain line :%s\n", data.to_string());
-		Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 3, Watchdog.WatchdogSeverity.DEBUG, 0, 0, &dlg);
+		Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 3, Watchdog.Severity.DEBUG, 0, 0, &dlg);
 		// see if the label has any image
 		return new ListViewItemComplex.createLabelFull(&data, elem.getImage(), elem.hasAction(), false, null);
 	}

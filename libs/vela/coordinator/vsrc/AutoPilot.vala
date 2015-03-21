@@ -55,7 +55,7 @@ internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 		if (isLoadingPage) { // check if we are on action ..
 			extring dlg = extring.stack(128);
 			dlg.printf("Busy, cannot load reasource:%s\n", id.url.to_string());
-			Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 1, Watchdog.WatchdogSeverity.ALERT, 0, 0, &dlg);
+			Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 1, Watchdog.Severity.ALERT, 0, 0, &dlg);
 			return false;
 		}
 #if false
@@ -86,7 +86,7 @@ internal class roopkotha.vela.coordinator.AutoPilot : Replicable {
 
 		extring dbg = extring.stack(128);
 		dbg.printf("Action is %s\n", paction.action.to_string());
-		Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 5, Watchdog.WatchdogSeverity.DEBUG, 0, 0, &dbg);
+		Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 5, Watchdog.Severity.DEBUG, 0, 0, &dbg);
 
 		extring cmd = extring.stack(128);
 		cmd.concat(&paction.action);

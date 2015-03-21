@@ -18,7 +18,7 @@ public class roopkotha.vela.handler.CompositeResourceHandler : ResourceHandler {
 		if(prefix.is_empty()) {
 			extring dlg = extring.stack(128);
 			dlg.printf("Handler is empty:%s\n", id.url.to_string());
-			Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 1, Watchdog.WatchdogSeverity.ALERT, 0, 0, &dlg);
+			Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 1, Watchdog.Severity.ALERT, 0, 0, &dlg);
 			return null;
 		}
 		return handlers.getProperty(&prefix);

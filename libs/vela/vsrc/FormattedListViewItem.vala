@@ -145,7 +145,7 @@ public class roopkotha.vela.FormattedListViewItem : ListViewItem {
 		talk.printf("Rendering text[%d]:%s\n", text.length(), text.to_string());
 		font.dumpAll(&talk);
 		talk.concat_char('\n');
-		Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.WatchdogSeverity.DEBUG, 0, 0, &talk);
+		Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.Severity.DEBUG, 0, 0, &talk);
 #endif
 	//	text = text.replace('\n', ' ').replace('\r', ' ').trim(); /*< skip the newlines */
 		if (text.is_empty()) { /*< empty xultb_str_t* .. skip */
@@ -189,7 +189,7 @@ public class roopkotha.vela.FormattedListViewItem : ListViewItem {
 #if GUI_DEBUG
 				extring talk = extring.stack(128);
 				talk.printf("Rendering capsule: %d\n", cap.textType);
-				Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.WatchdogSeverity.DEBUG, 0, 0, &talk);
+				Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.Severity.DEBUG, 0, 0, &talk);
 #endif
 		}
 		int oldColor = g.getColor();
@@ -257,7 +257,7 @@ public class roopkotha.vela.FormattedListViewItem : ListViewItem {
 				talk.printf("Rendering child of [%d]-", cap.textType);
 				newFont.dumpAll(&talk);
 				talk.concat_char('\n');
-				Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.WatchdogSeverity.DEBUG, 0, 0, &talk);
+				Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.Severity.DEBUG, 0, 0, &talk);
 #endif
 				if (child.textType == FormattedTextType.PLAIN) {
 					core.assert(newFont != null);
@@ -272,7 +272,7 @@ public class roopkotha.vela.FormattedListViewItem : ListViewItem {
 #if GUI_DEBUG
 				extring talk = extring.stack(128);
 				talk.printf("End capsule: %d\n", cap.textType);
-				Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.WatchdogSeverity.DEBUG, 0, 0, &talk);
+				Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.Severity.DEBUG, 0, 0, &talk);
 #endif
 		}
 	}
@@ -312,7 +312,7 @@ public class roopkotha.vela.FormattedListViewItem : ListViewItem {
 			talk.printf("Rendering[Paint] ..");
 			font.dumpAll(&talk);
 			talk.concat_char('\n');
-			Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.WatchdogSeverity.DEBUG, 0, 0, &talk);
+			Watchdog.watchit(core.sourceFileName(), core.sourceLineNo(), 10, Watchdog.Severity.DEBUG, 0, 0, &talk);
 #endif
 			if (cap.textType == FormattedTextType.PLAIN) {
 				renderText(g, font, &cap.content);
